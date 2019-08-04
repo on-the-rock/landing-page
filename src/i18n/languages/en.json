@@ -1,0 +1,24 @@
+{
+  "top.subTitle": "Create your original card!!!",
+  "top": {
+    "subTitle": "Create your original card!!!",
+    "yourOnlyCardTitle": "You can create your original card and battle",
+    "yourOnlyCardSentence": "Create card using your own blockchain game's image.",
+    "sellYourCardTitle": "You can sell your original card",
+    "sellYourCardSentence": "The created cards are enable to trade via DAPPS market",
+    "whatIsDappsTitle": "What is blockchain games(DAPPS)?",
+    "whatIsDappsSentence":"Blockchain game is a game which choose blockchain as database.It has some pros, data permanency(data is not deleted when game service is finished.) and datatransparency(player becomes not necessary to suspect fraud.) etc.",
+    "strengthTitle": "Strength of this game",
+    "strengthSentence": "Even if the data is persist after DAPPS service ended, It is no sense without place to use thedata.This game is the place to use image even if some DAPPS service ended,and the platform for creator who sell the card with his own picture.",
+    "storyTitle": "Story",
+    "storySentence": "Card game is always played in this world. However someday the image of card has disappeared. You conceive to substitute by blockchain image...",
+    "systemTitle": "System",
+    "makeCardTitle":"Create card",
+    "makeCardSentence": "Create card with frame(card whose image has disappeared) and your own images.",
+    "makeDeckTitle": "Make Deck",
+    "makeDeckSentence":"Make deck which contains 40 cards from a lot of cards.",
+    "battleTitle":"Battle",
+    "battleSentence":"Your favorite character is full of the screen!!!",
+    "companyName": "on the rock Co., Ltd."
+  }
+}
