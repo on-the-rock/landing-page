@@ -18,7 +18,7 @@ class Home extends Component {
                                 <div className="right item">
                                     <Dropdown text='Language'>
                                         <Dropdown.Menu>
-                                            <Dropdown.Item flag='us' text='English' onClick={e=>{handleOnChangeLanguage('en')}}/>
+                                            <Dropdown.Item text='English' onClick={e=>{handleOnChangeLanguage('en')}}/>
                                             <Dropdown.Item flag='jp' text='日本語' onClick={e=>{handleOnChangeLanguage('ja')}}/>
                                         </Dropdown.Menu>
                                     </Dropdown>
