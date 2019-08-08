@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {FormattedMessage} from "react-intl";
-// import Header from "../component/header/index";
+// import white header from "../component/white header/index";
 import {Dropdown} from "semantic-ui-react";
 
 class Home extends Component {
@@ -8,7 +8,7 @@ class Home extends Component {
         const {handleOnChangeLanguage} = this.props;
         return (
             <div className="pusher">
-                <div className="ui inverted vertical masthead center aligned segment">
+                <div className="ui vertical masthead center aligned segment">
                     <div className="ui container">
                         <div className="ui large secondary inverted pointing menu">
                             <a className="active item">Home</a>
@@ -28,20 +28,23 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <img className='ui fluid image' src='https://d1wwbe44qvngmh.cloudfront.net/images/banner.png'/>
-
+                    <div className='col'>
+                        <img className='ui fluid image ' src='https://d1wwbe44qvngmh.cloudfront.net/images/banner.png'/>
+                        <a href=""><img className='start-button'
+                                src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.png'/></a>
+                    </div>
                 </div>
 
                 <div className="ui vertical stripe segment">
                     <div className="ui middle aligned stackable grid container">
                         <div className="row">
-                            <div className="six wide column">
-                                <h3 className="ui header"><FormattedMessage id="top.yourOnlyCardTitle"/></h3>
-                                <p><FormattedMessage id="top.yourOnlyCardSentence"/></p>
-                                <h3 className="ui header"><FormattedMessage id="top.sellYourCardTitle"/></h3>
-                                <p><FormattedMessage id="top.sellYourCardSentence"/></p>
+                            <div className="eight wide column">
+                                <h3 className="ui white header"><FormattedMessage id="top.yourOnlyCardTitle"/></h3>
+                                <p className="gray"><FormattedMessage id="top.yourOnlyCardSentence"/></p>
+                                <h3 className="ui white header"><FormattedMessage id="top.sellYourCardTitle"/></h3>
+                                <p className="gray"><FormattedMessage id="top.sellYourCardSentence"/></p>
                             </div>
-                            <div className="ten wide right floated column">
+                            <div className="eight wide right floated column">
                                 <img src='https://d1wwbe44qvngmh.cloudfront.net/images/flow.jpg'
                                      className="ui fluid image"
                                      alt="flow"/>
@@ -59,8 +62,8 @@ class Home extends Component {
                                      alt="blockchain"/>
                             </div>
                             <div className="ten wide middle aligned column">
-                                <h3><FormattedMessage id="top.whatIsDappsTitle"/></h3>
-                                <p><FormattedMessage id="top.whatIsDappsSentence"/></p>
+                                <h3 className="ui white header"><FormattedMessage id="top.whatIsDappsTitle"/></h3>
+                                <p className="gray"><FormattedMessage id="top.whatIsDappsSentence"/></p>
                             </div>
                         </div>
                     </div>
@@ -70,8 +73,8 @@ class Home extends Component {
                     <div className="ui stackable grid container">
                         <div className="row">
                             <div className="ten wide middle aligned column">
-                                <h3><FormattedMessage id="top.strengthTitle"/></h3>
-                                <p><FormattedMessage id="top.strengthSentence"/></p>
+                                <h3 className="ui white header"><FormattedMessage id="top.strengthTitle"/></h3>
+                                <p className="gray"><FormattedMessage id="top.strengthSentence"/></p>
                             </div>
                             <div className="six wide column">
                                 <img src='https://d1wwbe44qvngmh.cloudfront.net/images/strength.png'
@@ -91,8 +94,8 @@ class Home extends Component {
                                      alt="story"/>
                             </div>
                             <div className="ten wide middle aligned column">
-                                <h3 className="ui header"><FormattedMessage id="top.storyTitle"/></h3>
-                                <p><FormattedMessage id="top.storySentence"/></p>
+                                <h3 className="ui white header"><FormattedMessage id="top.storyTitle"/></h3>
+                                <p className="gray"><FormattedMessage id="top.storySentence"/></p>
                             </div>
                         </div>
                     </div>
@@ -100,11 +103,11 @@ class Home extends Component {
 
                 <div className="ui vertical stripe segment">
                     <div className="ui text">
-                        <h3 className="ui center aligned header"><FormattedMessage id="top.systemTitle"/></h3>
+                        <h3 className="ui center aligned white header"><FormattedMessage id="top.systemTitle"/></h3>
                         <div className="ui center aligned grid">
                             <div className="five wide column">
-                                <h4 className="ui header"><FormattedMessage id="top.makeCardTitle"/></h4>
-                                <p><FormattedMessage id="top.makeCardSentence"/></p>
+                                <h4 className="ui white header"><FormattedMessage id="top.makeCardTitle"/></h4>
+                                <p className="gray"><FormattedMessage id="top.makeCardSentence"/></p>
                                 <div className="col">
                                     <img src="https://d1wwbe44qvngmh.cloudfront.net/images/create-card.gif"
                                          className="create-card-gif"/>
@@ -113,18 +116,18 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div className="five wide column">
-                                <h4 className="ui header"><FormattedMessage id="top.makeDeckTitle"/></h4>
-                                <p><FormattedMessage id="top.makeDeckSentence"/></p>
+                                <h4 className="ui white header"><FormattedMessage id="top.makeDeckTitle"/></h4>
+                                <p className="gray"><FormattedMessage id="top.makeDeckSentence"/></p>
                                 <img src='https://d1wwbe44qvngmh.cloudfront.net/images/deck.png'
                                      className="ui massive image"
                                      alt="battle"/>
                             </div>
                             <div className="five wide column">
-                                <h4 className="ui header"><FormattedMessage id="top.battleTitle"/></h4>
-                                <p><FormattedMessage id="top.battleSentence"/></p>
+                                <h4 className="ui white header"><FormattedMessage id="top.battleTitle"/></h4>
+                                <p className="gray"><FormattedMessage id="top.battleSentence"/></p>
                                 <div className="col">
                                     <img src='https://d1wwbe44qvngmh.cloudfront.net/images/battle-fg.png'
-                                         className="battle-fg"
+                                         className=" ui fluid image center aligned"
                                          alt="battle"/>
                                     <img src='https://d1wwbe44qvngmh.cloudfront.net/images/battle-bg.png'
                                          className="battle-bg"
@@ -137,7 +140,8 @@ class Home extends Component {
 
                 <div className="ui inverted vertical footer segment">
                     <div className="ui container center aligned">
-                        <p><i className="copyright outline icon"/><FormattedMessage id="top.companyName"/></p>
+                        <p className="gray"><i className="copyright outline icon"/><FormattedMessage
+                            id="top.companyName"/></p>
                     </div>
                 </div>
             </div>

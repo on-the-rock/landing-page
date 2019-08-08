@@ -137,13 +137,30 @@
     width: 70%;
 }
 
+.start-button{
+    position: absolute !important;
+    top: 50% !important;
+    left: 40% !important;
+    width:20%;
+}
+
 .battle-bg {
-    width: 100%;
-}
-
-.battle-fg {
     position: absolute;
-    top: 15%;
-    width: 100%;
+    top:-10%;
+    left: -20%;
+    width: 130%;
+    z-index: -1;
 }
 
+.white{
+    color: white !important;
+}
+
+.gray{
+    color: gray;
+}
+
+
+body {
+    background-color: #332A28;
+}
