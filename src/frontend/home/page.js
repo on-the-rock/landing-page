@@ -140,7 +140,7 @@ class Home extends Component {
 
                 <div className="ui inverted vertical footer segment">
                     <div className="ui container center aligned">
-                        <p className="gray"><i className="copyright outline icon"/><FormattedMessage
+                        <p className="gray"><FormattedMessage
                             id="top.companyName"/></p>
                     </div>
                 </div>
