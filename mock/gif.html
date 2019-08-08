@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+        body {
+            background: #211b19;
+        }
+
+        .card-container {
+            position: relative;
+        }
+
+        .card-container img {
+            position: absolute;
+            top: 59px;
+            left: 59px;
+            width: 283px;
+        }
+
+        .card-bg-div {
+            height: 400px;
+            width: 400px;
+            background: url(./images/card-bg.png);
+            background-size: cover;
+            -webkit-animation-name: example;
+            -webkit-animation-duration: 40s;
+            -webkit-animation-iteration-count: infinite;
+            animation-name: example;
+            animation-duration: 40s;
+            animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes example {
+            from {
+                -ms-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -ms-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        }
+
+        @keyframes example {
+            from {
+                -ms-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -ms-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card-container">
+    <img src="https://d1wwbe44qvngmh.cloudfront.net/images/create-card.gif">
+    <div class="card-bg-div"></div>
+</div>
+
+</body>
+
+</html>
