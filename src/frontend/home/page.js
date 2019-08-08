@@ -10,7 +10,7 @@ class Home extends Component {
             <div className="pusher">
                 <div className="ui vertical masthead center aligned segment">
                     <div className="ui container">
-                        <div className="ui large secondary inverted pointing menu">
+                        <div className="ui large secondary inverted menu">
                             <a className="active item">Home</a>
                             <a className="item">Market</a>
                             <a className="item">Company</a>
