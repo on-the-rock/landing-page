@@ -93,6 +93,8 @@ class Home extends Component {
 
                 <div className="ui text">
                     <h2 className="ui center aligned white header"><FormattedMessage id="top.systemTitle"/></h2>
+                    <img src="https://d1wwbe44qvngmh.cloudfront.net/images/steps.svg"
+                    className="ui centered image step123"/>
                     <div className="ui center aligned grid">
                         <div className="five wide column">
                             <h3 className="ui white header"><FormattedMessage id="top.makeCardTitle"/></h3>
