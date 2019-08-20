@@ -145,27 +145,27 @@
 
 .start-button {
     position: absolute !important;
-    top: 65% !important;
+    top: 55% !important;
     left: 43% !important;
     width: 20%;
 }
 
 .banner-text {
     position: absolute !important;
-    top: 55% !important;
+    top: 30% !important;
     left: 43% !important;
     width: 20%;
 }
 
-.banner-bg {
-    position: absolute;
-    width: 100%;
+
+.banner {
+    background: url("https://d1wwbe44qvngmh.cloudfront.net/images/banner-bg.png") center bottom;
+    background-size: cover;
+    padding-bottom: 20%;
 }
 
-.margin-bottom-banner{
-    margin-bottom: 10%;
-    overflow: hidden;
-}
+
+
 .battle-bg {
     position: absolute;
     top: -30%;

@@ -8,8 +8,7 @@ class Home extends Component {
         const {handleOnChangeLanguage} = this.props;
         return (
             <div className="pusher">
-                <div className='col margin-bottom-banner'>
-                    <img className='banner-bg' src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-bg.png'/>
+                <div className='col banner'>
                     <div className="ui container">
                         <img className='ui fluid image'
                              src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'/>
