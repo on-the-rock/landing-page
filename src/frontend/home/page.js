@@ -49,14 +49,14 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div className="ui stackable grid">
+                <div className="ui stackable grid container">
                     <div className="row">
-                        <div className="six wide column">
+                        <div className="eight wide column">
                             <img src='https://d1wwbe44qvngmh.cloudfront.net/images/blockchain.png'
                                  className="ui fluid image"
                                  alt="blockchain"/>
                         </div>
-                        <div className="nine wide middle aligned column">
+                        <div className="eight wide middle aligned column">
                             <h2 className="ui white header"><FormattedMessage id="top.whatIsDappsTitle"/></h2>
                             <p className="gray"><FormattedMessage id="top.whatIsDappsSentence"/></p>
                         </div>
@@ -91,7 +91,7 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div className="ui text">
+                <div className="ui container">
                     <h2 className="ui center aligned white header"><FormattedMessage id="top.systemTitle"/></h2>
                     <img src="https://d1wwbe44qvngmh.cloudfront.net/images/steps.svg"
                     className="ui centered image step123"/>
