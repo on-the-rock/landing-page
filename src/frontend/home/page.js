@@ -8,26 +8,32 @@ class Home extends Component {
         const {handleOnChangeLanguage} = this.props;
         return (
             <div className="pusher">
-                <div className='col'>
-                    <img className='ui fluid image ' src='https://d1wwbe44qvngmh.cloudfront.net/images/banner.png'/>
-                    <a href=""><img className='start-button'
-                                    src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.png'/></a>
-                    <div className="ui container absolute-menu">
-                        <div className="ui large secondary inverted menu">
-                            <div className="right item">
-                                <a className="active item">Home</a>
-                                <a className="item">Market</a>
-                                <a className="item">Company</a>
-                                <Dropdown text='Language'>
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item text='English' onClick={e => {
-                                            handleOnChangeLanguage('en')
-                                        }}/>
-                                        <Dropdown.Item text='日本語' onClick={e => {
-                                            handleOnChangeLanguage('ja')
-                                        }}/>
-                                    </Dropdown.Menu>
-                                </Dropdown>
+                <div className='col margin-bottom-banner'>
+                    <img className='banner-bg' src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-bg.png'/>
+                    <div className="ui container">
+                        <img className='ui fluid image'
+                             src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'/>
+                        <img className='banner-text' src="https://d1wwbe44qvngmh.cloudfront.net/images/Create-your-own-cards.png"/>
+                        <a href=""><img className='start-button'
+                                        src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.png'/></a>
+
+                        <div className="ui container absolute-menu">
+                            <div className="ui large secondary inverted menu">
+                                <div className="right item">
+                                    <a className="active item">Home</a>
+                                    <a className="item">Market</a>
+                                    <a className="item">Company</a>
+                                    <Dropdown text='Language'>
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item text='English' onClick={e => {
+                                                handleOnChangeLanguage('en')
+                                            }}/>
+                                            <Dropdown.Item text='日本語' onClick={e => {
+                                                handleOnChangeLanguage('ja')
+                                            }}/>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </div>
                             </div>
                         </div>
                     </div>

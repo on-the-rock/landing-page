@@ -145,11 +145,27 @@
 
 .start-button {
     position: absolute !important;
-    top: 50% !important;
-    left: 40% !important;
+    top: 65% !important;
+    left: 43% !important;
     width: 20%;
 }
 
+.banner-text {
+    position: absolute !important;
+    top: 55% !important;
+    left: 43% !important;
+    width: 20%;
+}
+
+.banner-bg {
+    position: absolute;
+    width: 100%;
+}
+
+.margin-bottom-banner{
+    margin-bottom: 10%;
+    overflow: hidden;
+}
 .battle-bg {
     position: absolute;
     top: -30%;
