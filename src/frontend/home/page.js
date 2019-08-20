@@ -15,7 +15,7 @@ class Home extends Component {
                         <img className='banner-text' src="https://d1wwbe44qvngmh.cloudfront.net/images/Create-your-own-cards.png"/>
                         <a href=""><img className='start-button'
                                         src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.png'/></a>
-
+                        <img className='banner-card' src="https://d1wwbe44qvngmh.cloudfront.net/images/cards.png"/>
                         <div className="ui container absolute-menu">
                             <div className="ui large secondary inverted menu">
                                 <div className="right item">

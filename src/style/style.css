@@ -145,18 +145,24 @@
 
 .start-button {
     position: absolute !important;
-    top: 55% !important;
-    left: 43% !important;
-    width: 20%;
+    top: 40% !important;
+    left: 44% !important;
+    width: 18%;
 }
 
 .banner-text {
     position: absolute !important;
     top: 30% !important;
-    left: 43% !important;
-    width: 20%;
+    left: 44% !important;
+    width: 18%;
 }
 
+.banner-card {
+    position: absolute !important;
+    top: 40% !important;
+    left: 62% !important;
+    width: 10%;
+}
 
 .banner {
     background: url("https://d1wwbe44qvngmh.cloudfront.net/images/banner-bg.png") center bottom;
