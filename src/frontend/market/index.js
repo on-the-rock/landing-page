@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import Home from './page'
+import Market from './page'
 import * as ja from '../../i18n/languages/ja'
 import * as en from '../../i18n/languages/en'
 import {updateIntl} from "react-intl-redux";
@@ -24,4 +24,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Market)

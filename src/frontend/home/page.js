@@ -1,42 +1,13 @@
 import React, {Component} from 'react';
 import {FormattedMessage} from "react-intl";
-// import white header from "../component/white header/index";
-import {Dropdown} from "semantic-ui-react";
+import Header from "../component/header.js";
 
 class Home extends Component {
     render() {
         const {handleOnChangeLanguage} = this.props;
         return (
             <div className="pusher">
-                <div className='col banner'>
-                    <div className="ui container">
-                        <img className='ui fluid image'
-                             src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'/>
-                        <img className='banner-text' src="https://d1wwbe44qvngmh.cloudfront.net/images/Create-your-own-cards.png"/>
-                        <a href=""><img className='start-button'
-                                        src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.png'/></a>
-                        <img className='banner-card' src="https://d1wwbe44qvngmh.cloudfront.net/images/cards.png"/>
-                        <div className="ui container absolute-menu">
-                            <div className="ui large secondary inverted menu">
-                                <div className="right item">
-                                    <a className="active item">Home</a>
-                                    <a className="item">Market</a>
-                                    <a className="item">Company</a>
-                                    <Dropdown text='Language'>
-                                        <Dropdown.Menu>
-                                            <Dropdown.Item text='English' onClick={e => {
-                                                handleOnChangeLanguage('en')
-                                            }}/>
-                                            <Dropdown.Item text='日本語' onClick={e => {
-                                                handleOnChangeLanguage('ja')
-                                            }}/>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Header handleOnChangeLanguage={handleOnChangeLanguage} activeIndex={0}/>
                 <div className="ui middle aligned stackable grid container">
                     <div className="row">
                         <div className="seven wide column">
@@ -99,16 +70,19 @@ class Home extends Component {
                 <div className="ui container">
                     <h2 className="ui center aligned white header"><FormattedMessage id="top.systemTitle"/></h2>
                     <img src="https://d1wwbe44qvngmh.cloudfront.net/images/steps.svg"
-                    className="ui centered image step123"/>
+                         className="ui centered image step123"
+                         alt='123'/>
                     <div className="ui center aligned grid">
                         <div className="five wide column">
                             <h3 className="ui white header"><FormattedMessage id="top.makeCardTitle"/></h3>
                             <p className="gray"><FormattedMessage id="top.makeCardSentence"/></p>
                             <div className="col">
                                 <img src="https://d1wwbe44qvngmh.cloudfront.net/images/create-card.gif"
-                                     className="create-card-gif"/>
+                                     className="create-card-gif"
+                                     alt='create-card'/>
                                 <img src="https://d1wwbe44qvngmh.cloudfront.net/images/card-bg.png"
-                                     className="card-bg"/>
+                                     className="card-bg"
+                                     alt='card-bg'/>
                             </div>
                         </div>
                         <div className="five wide column">
