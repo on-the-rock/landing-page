@@ -191,7 +191,8 @@
 .footer-right {
     position: absolute;
     top: 75%;
-    left: 60%;
+    left: 56%;
+    font-size: 1vw;
 }
 
 .footer-left {

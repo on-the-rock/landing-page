@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Dropdown} from "semantic-ui-react";
 
 class Header extends Component {
+    // TODO: ヘッダーを共通化する。現在は使ってない
     render() {
         const {handleOnChangeLanguage} = this.props;
         return (
