@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {FormattedMessage} from "react-intl";
 import Header from "../component/header.js";
+import Footer from "../component/footer";
 
 class Home extends Component {
     render() {
@@ -106,16 +107,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-
-                <div className="ui vertical footer segment col">
-                    <img src='https://d1wwbe44qvngmh.cloudfront.net/images/footer.png'
-                         alt="footer"
-                         className="ui image"/>
-                    <p className="gray footer-right"><FormattedMessage
-                        id="top.companyName"/></p>
-                    <img src="https://d1wwbe44qvngmh.cloudfront.net/images/Frame+C+Battle.png"
-                         alt="frame c battle" className="footer-left"/>
-                </div>
+                <Footer/>
             </div>
         );
     }

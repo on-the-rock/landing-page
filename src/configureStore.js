@@ -33,8 +33,9 @@ function localesReducer(state = {}, action) {
 
 // 永続化の設定
 const persistConfig = {
-    key: 'landing',
+    key: 'FrameCBattle.landing',
     storage,
+    blacklist:'intl.messages'
 };
 
 const reducers = combineReducers({

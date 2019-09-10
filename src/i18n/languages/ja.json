@@ -30,6 +30,10 @@
     "preSale3Header": "プレセール第三弾: frame c battle ✕ HBWallet",
     "preSale3Text": "coming soon",
     "preSale4Header": "プレセール第四弾: frame c battle ✕ くらて学園",
-    "preSale4Text": "coming soon"
+    "preSale4Text": "coming soon",
+    "purchase": "購入",
+    "remains": "残枚数",
+    "totalSupply": "総発行量",
+    "price": "価格"
   }
 }
