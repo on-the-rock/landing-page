@@ -645,8 +645,8 @@ const settings = {
                     "type": "function"
                 }
             ],
-            // TODO: rewrite this everytime you deploy contract in development
-            address: '0xe6376ffd6da563a8591ae7e02482c3ce8d454b23'
+            address: '0xdcc0ca8ffe623c2ee98055eba7b0e0bad0ae39b0' //Main net
+            // address: '0xe6376ffd6da563a8591ae7e02482c3ce8d454b23' //Ropsten address
         },
         sellContract:{
             ABI: [
@@ -814,7 +814,8 @@ const settings = {
                     "type": "event"
                 }
             ],
-            address:'0x22015f20472dfcfecf434dce31c8f374e540d58c'
+            address: '0xcb2a60adc6c0c9065c5b3963b873b65c86c8d4f2' //Main net
+            // address:'0x22015f20472dfcfecf434dce31c8f374e540d58c' // Ropsten test net
         }
     }
 };
