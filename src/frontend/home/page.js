@@ -97,7 +97,7 @@ class Home extends Component {
                             <h3 className="ui white header"><FormattedMessage id="top.battleTitle"/></h3>
                             <p className="gray"><FormattedMessage id="top.battleSentence"/></p>
                             <div className="col">
-                                <img src='https://d1wwbe44qvngmh.cloudfront.net/images/battle-fg.png'
+                                <img src='https://d1wwbe44qvngmh.cloudfront.net/images/battle.png'
                                      className=" ui fluid image center aligned bigger"
                                      alt="battle"/>
                                 <img src='https://d1wwbe44qvngmh.cloudfront.net/images/battle-bg.png'

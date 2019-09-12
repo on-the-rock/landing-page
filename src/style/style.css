@@ -137,16 +137,16 @@
     width: 70%;
 }
 
-.absolute-menu{
+.absolute-menu {
     position: absolute;
-    top:0%;
+    top: 0%;
     left: 10%;
 }
 
 .start-button {
     position: absolute !important;
     top: 40% !important;
-    left: 44% !important;
+    left: 41% !important;
     width: 18%;
 }
 
@@ -167,9 +167,8 @@
 .banner {
     background: url("https://d1wwbe44qvngmh.cloudfront.net/images/banner-bg.png") center bottom;
     background-size: cover;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
 }
-
 
 
 .battle-bg {
@@ -202,7 +201,8 @@
     width: 30%;
     max-width: 400px;
 }
-h2.ui.header{
+
+h2.ui.header {
     font-size: 2.5rem !important;
 }
 
@@ -216,16 +216,18 @@ h2.ui.header{
     margin-top: -10% !important;
 }
 
-.step123{
+.step123 {
     width: 67%;
-    margin-top:5%;
+    margin-top: 5%;
     margin-bottom: 1%;
 }
 
 .card {
-    width:33% ;
+    width: 33%;
 }
 
 body {
-    background-color: #332A28;
+    width: 100%;
+    background: #1A496F;
+    background: linear-gradient(to bottom right, #000000 5.31%, #1A496F 45.13%, #000000 94.21%);;
 }

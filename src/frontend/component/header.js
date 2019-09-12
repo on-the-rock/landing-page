@@ -10,17 +10,14 @@ class Header extends Component {
                     <img className='ui fluid image'
                          src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'
                          alt='banner'/>
-                    <img className='banner-text'
-                         src="https://d1wwbe44qvngmh.cloudfront.net/images/Create-your-own-cards.png"
-                         alt='banner-text'/>
                     <a href="">
                         <img className='start-button'
-                             src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.png'
+                             src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.svg'
                              alt='start'/>
                     </a>
-                    <img className='banner-card'
-                         src="https://d1wwbe44qvngmh.cloudfront.net/images/cards.png"
-                         alt='card'/>
+                    {/*<img className='banner-card'*/}
+                    {/*     src="https://d1wwbe44qvngmh.cloudfront.net/images/cards.png"*/}
+                    {/*     alt='card'/>*/}
                     <div className="ui container absolute-menu">
                         <div className="ui large secondary inverted menu">
                             <div className="right item">
