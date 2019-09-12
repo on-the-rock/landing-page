@@ -226,7 +226,8 @@ h2.ui.header {
     width: 33%;
 }
 
-body {
+body,html {
+    height: auto !important;
     width: 100%;
     background: #1A496F;
     background: linear-gradient(to bottom right, #000000 5.31%, #1A496F 45.13%, #000000 94.21%);;

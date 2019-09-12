@@ -10,6 +10,9 @@ class Header extends Component {
                     <img className='ui fluid image'
                          src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'
                          alt='banner'/>
+                    {/*<img className='banner-text'*/}
+                    {/*     src='https://d1wwbe44qvngmh.cloudfront.net/images/Create-your-own-cards.png'*/}
+                    {/*     alt='start'/>*/}
                     <a href="">
                         <img className='start-button'
                              src='https://d1wwbe44qvngmh.cloudfront.net/images/start-game.svg'
