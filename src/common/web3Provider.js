@@ -21,11 +21,14 @@ const blockchainSetUp = async function () {
         console.log('detect web3 provider');
         web3js = new Web3(window.web3.currentProvider);
 
-        customerAddress = web3js.eth.accounts[0];
+        customerAddress = window.web3.eth.defaultAccount||web3js.eth.defaultAccount||web3js.eth.accounts[0];
     } else {
         //TODO: metamaskのインストールを促すようにしたいが、このタイミングじゃなくていいかも。Market行ったタイミング等でいい
     }
-    cardContract = new web3js.eth.Contract(settings.blockChain.cardContract.ABI, settings.blockChain.cardContract.address);
-    sellContract = new web3js.eth.Contract(settings.blockChain.sellContract.ABI, settings.blockChain.sellContract.address);
+    console.log(customerAddress)
+    if (web3js) {
+        cardContract = new web3js.eth.Contract(settings.blockChain.cardContract.ABI, settings.blockChain.cardContract.address);
+        sellContract = new web3js.eth.Contract(settings.blockChain.sellContract.ABI, settings.blockChain.sellContract.address);
+    }
 }
-export {cardContract, web3js, customerAddress,sellContract, blockchainSetUp};
+export {cardContract, web3js, customerAddress, sellContract, blockchainSetUp};
