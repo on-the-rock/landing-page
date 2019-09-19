@@ -25,7 +25,6 @@ const blockchainSetUp = async function () {
     } else {
         //TODO: metamaskのインストールを促すようにしたいが、このタイミングじゃなくていいかも。Market行ったタイミング等でいい
     }
-    console.log(customerAddress)
     if (web3js) {
         cardContract = new web3js.eth.Contract(settings.blockChain.cardContract.ABI, settings.blockChain.cardContract.address);
         sellContract = new web3js.eth.Contract(settings.blockChain.sellContract.ABI, settings.blockChain.sellContract.address);

@@ -7,13 +7,16 @@ import store, {persistor} from './configureStore'
 import 'semantic-ui-css/semantic.min.css'
 import './style/style.css'
 import {IntlProvider} from 'react-intl-redux'
+import ErrorBoundary from "./frontend/errorBoundary";
 
 
 render(
     <Provider store={store}>
         <IntlProvider>
             <PersistGate loading={null} persistor={persistor}>
-                <App/>
+                <ErrorBoundary>
+                    <App/>
+                </ErrorBoundary>
             </PersistGate>
         </IntlProvider>
     </Provider>,
