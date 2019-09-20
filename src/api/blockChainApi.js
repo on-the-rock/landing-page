@@ -22,6 +22,5 @@ export default class BlockChainApi {
             .on('transactionHash',onTransactionHash)
             .on('receipt',onReceipt)
             .on('error',onError)
-
     }
 }
