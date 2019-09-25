@@ -8,7 +8,9 @@ import 'semantic-ui-css/semantic.min.css'
 import './style/style.css'
 import {IntlProvider} from 'react-intl-redux'
 import ErrorBoundary from "./frontend/errorBoundary";
-
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 
 render(
     <Provider store={store}>
