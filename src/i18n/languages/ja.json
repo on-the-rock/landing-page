@@ -35,5 +35,9 @@
     "remains": "残枚数",
     "totalSupply": "総発行量",
     "price": "価格"
+  },
+  "register": {
+    "createAccount": "アカウントを作成",
+    "resentCode": "コード再送信"
   }
 }

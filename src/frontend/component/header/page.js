@@ -7,7 +7,7 @@ class Header extends Component {
 
     render() {
         const {errorMessage, confirmMaleSent, success} = this.state
-        const {handleOnChangeLanguage, activeIndex,intl} = this.props;
+        const {handleOnChangeLanguage, activeIndex, intl} = this.props;
         return (
             <div className='col banner'>
                 <div className="ui container">
@@ -15,10 +15,26 @@ class Header extends Component {
                          src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'
                          alt='banner'/>
                     <Modal trigger={<img className='pre-register-button'
-                                         src={intl.locale==='ja' ?'https://d1wwbe44qvngmh.cloudfront.net/images/button-jp.png':'https://d1wwbe44qvngmh.cloudfront.net/images/button-en.png' }
+                                         src={intl.locale === 'ja' ? 'https://d1wwbe44qvngmh.cloudfront.net/images/button-jp.png' : 'https://d1wwbe44qvngmh.cloudfront.net/images/button-en.png'}
                                          alt='start'/>}>
                         <Modal.Header>Sign Up</Modal.Header>
                         <Modal.Content>
+                            <div className="ui tablet stackable steps">
+                                <div className={"step " + (!confirmMaleSent ? "active" : "completed")}>
+                                    <i className="pencil alternate icon"/>
+                                    <div className="content">
+                                        <div className="title">Sign</div>
+                                        <div className="description">Enter email and password</div>
+                                    </div>
+                                </div>
+                                <div className={"step " + (confirmMaleSent && "active ") + (success && "completed")}>
+                                    <i className="eye icon"/>
+                                    <div className="content">
+                                        <div className="title">Confirm</div>
+                                        <div className="description">Enter verification code</div>
+                                    </div>
+                                </div>
+                            </div>
                             <form name='form-signup'>
                                 <div className="ui labeled input">
                                     <div className="ui label">
@@ -32,13 +48,13 @@ class Header extends Component {
                                     this.onResendCode()
                                 }}>Resend Code</button>}
                                 <br/>
-                                <div className="ui labeled input">
+                                {!confirmMaleSent && <div className="ui labeled input">
                                     <div className="ui label">
                                         Password
                                     </div>
                                     <input type="password" id="password" placeholder="Password"/>
-                                </div>
-                                <br/>
+                                </div>}
+                                {!confirmMaleSent && <br/>}
                                 {!confirmMaleSent && <button className='ui primary button' onClick={e => {
                                     e.preventDefault()
                                     this.onSignUp()
@@ -53,8 +69,12 @@ class Header extends Component {
                                     <p> {errorMessage}</p>
                                 </div>}
                                 {confirmMaleSent && <div>
-                                    <span>code(Check your e-mail)</span>
-                                    <input type="text" id="code"/>
+                                    <div className="ui labeled input">
+                                        <div className="ui label">
+                                            Code(Check your mail)
+                                        </div>
+                                        <input type="text" id="code" placeholder="Email Address"/>
+                                    </div>
                                     <button className='ui primary button' onClick={e => {
                                         e.preventDefault()
                                         this.onConfirmCode()
