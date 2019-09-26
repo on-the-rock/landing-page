@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Dropdown, Image, Modal} from "semantic-ui-react";
 import {Auth} from 'aws-amplify';
+import {FormattedMessage} from "react-intl";
 
 class Header extends Component {
     state = {};
@@ -17,28 +18,41 @@ class Header extends Component {
                     <Modal trigger={<img className='pre-register-button'
                                          src={intl.locale === 'ja' ? 'https://d1wwbe44qvngmh.cloudfront.net/images/button-jp.png' : 'https://d1wwbe44qvngmh.cloudfront.net/images/button-en.png'}
                                          alt='start'/>}>
-                        <Modal.Header>Sign Up</Modal.Header>
+                        <Modal.Header><FormattedMessage
+                            id={success ? "register.completed" : "register.signUp"}/></Modal.Header>
                         <Modal.Content>
                             <div className="ui tablet stackable steps">
                                 <div className={"step " + (!confirmMaleSent ? "active" : "completed")}>
                                     <i className="pencil alternate icon"/>
                                     <div className="content">
-                                        <div className="title">Sign</div>
-                                        <div className="description">Enter email and password</div>
+                                        <div className="title"><FormattedMessage id="register.register"/></div>
+                                        <div className="description"><FormattedMessage
+                                            id="register.registerDescription"/></div>
                                     </div>
                                 </div>
-                                <div className={"step " + (confirmMaleSent && "active ") + (success && "completed")}>
+                                <div
+                                    className={"step " + ((confirmMaleSent && !success) ? "active " : "") + (success && "completed")}>
                                     <i className="eye icon"/>
                                     <div className="content">
-                                        <div className="title">Confirm</div>
-                                        <div className="description">Enter verification code</div>
+                                        <div className="title"><FormattedMessage id="register.confirm"/></div>
+                                        <div className="description"><FormattedMessage
+                                            id="register.confirmDescription"/></div>
+                                    </div>
+                                </div>
+                                <div
+                                    className={"step " + (confirmMaleSent && success && "active ") + (success && "completed")}>
+                                    <i className="thumbs up icon"/>
+                                    <div className="content">
+                                        <div className="title"><FormattedMessage id="register.complete"/></div>
+                                        <div className="description"><FormattedMessage
+                                            id="register.completeDescription"/></div>
                                     </div>
                                 </div>
                             </div>
-                            <form name='form-signup'>
+                            {!success && <form name='form-signup'>
                                 <div className="ui labeled input">
                                     <div className="ui label">
-                                        Email
+                                        <FormattedMessage id="register.mail"/>
                                     </div>
                                     <input type="text" id="email" placeholder="Email Address"/>
                                 </div>
@@ -46,60 +60,71 @@ class Header extends Component {
                                 <button className='ui button' style={{marginLeft: '1%'}} onClick={e => {
                                     e.preventDefault()
                                     this.onResendCode()
-                                }}>Resend Code</button>}
+                                }}><FormattedMessage id="register.resentCode"/></button>}
                                 <br/>
                                 {!confirmMaleSent && <div className="ui labeled input">
                                     <div className="ui label">
-                                        Password
+                                        <FormattedMessage id="register.password"/>
                                     </div>
-                                    <input type="password" id="password" placeholder="Password"/>
+                                    <div className="inline field">
+                                        <input type="password" id="password" placeholder="Password"/>
+                                        <div className="ui left pointing blue basic label">
+                                            <FormattedMessage id="register.passwordRequirement"/>
+                                        </div>
+                                    </div>
                                 </div>}
                                 {!confirmMaleSent && <br/>}
                                 {!confirmMaleSent && <button className='ui primary button' onClick={e => {
                                     e.preventDefault()
                                     this.onSignUp()
-                                }}>Create Account</button>}
+                                }}><FormattedMessage id="register.createAccount"/></button>}
                                 {!confirmMaleSent && errorMessage &&
                                 <div
                                     className="ui message negative">
                                     <i className="close icon" onClick={e => this.onCloseMessage()}/>
                                     <div className="header">
-                                        invalid input
+                                        <FormattedMessage id="register.invalidInput"/>
                                     </div>
                                     <p> {errorMessage}</p>
                                 </div>}
                                 {confirmMaleSent && <div>
                                     <div className="ui labeled input">
                                         <div className="ui label">
-                                            Code(Check your mail)
+                                            <FormattedMessage id="register.code"/>
                                         </div>
-                                        <input type="text" id="code" placeholder="Email Address"/>
+                                        <div className="inline field">
+                                            <input type="text" id="code" placeholder="Email Address"/>
+                                            <div className="ui bellow pointing blue basic label">
+                                                <FormattedMessage id="register.codeFromMail"/>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <br/>
                                     <button className='ui primary button' onClick={e => {
                                         e.preventDefault()
                                         this.onConfirmCode()
-                                    }}>Confirm Code
+                                    }}><FormattedMessage id="register.confirm"/>
                                     </button>
                                     {errorMessage &&
                                     <div
                                         className="ui message negative">
                                         <i className="close icon" onClick={e => this.onCloseMessage()}/>
                                         <div className="header">
-                                            invalid input
+                                            <FormattedMessage id="register.invalidInput"/>
                                         </div>
                                         <p> {errorMessage}</p>
                                     </div>}
-                                    {success &&
-                                    <div
-                                        className="ui message positive">
-                                        <i className="close icon" onClick={e => this.onCloseMessage()}/>
-                                        <div className="header">
-                                            pre-register successfully!!!
-                                        </div>
-                                        <p> Thank you for pre-register, Please see <a href='/market'>market</a></p>
-                                    </div>}
                                 </div>}
-                            </form>
+                            </form>}
+                            {success &&
+                            <div
+                                className="ui message positive">
+                                <i className="close icon" onClick={e => this.onCloseMessage()}/>
+                                <div className="header">
+                                    <FormattedMessage id="register.success"/>
+                                </div>
+                                <p><a href='/market'><FormattedMessage id="register.goMarket"/></a></p>
+                            </div>}
                         </Modal.Content>
                     </Modal>
                     <div className="ui container absolute-menu">

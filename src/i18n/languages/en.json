@@ -35,5 +35,25 @@
     "remains": "remains",
     "totalSupply": "totalSupply",
     "price": "price"
+  },
+  "register": {
+    "signUp" : "Sign up",
+    "completed": "Completed",
+    "register": "Resister",
+    "registerDescription": "Enter email and password",
+    "complete": "Complete",
+    "completeDescription": "You can get present",
+    "confirm": "Confirm",
+    "confirmDescription": "Enter verification code",
+    "mail": "E-mail",
+    "password": "password",
+    "passwordRequirement" : " password must be 6 characters or more, including uppercase and lowercase symbols ",
+    "code" : "Code",
+    "codeFromMail" : "Check your mail",
+    "resentCode": "Resend Code",
+    "createAccount": "Create Account",
+    "invalidInput": "Invalid input",
+    "success": "pre-register successfully!!!",
+    "goMarket": "Thank you for pre-register, Please see market"
   }
 }

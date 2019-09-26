@@ -37,7 +37,23 @@
     "price": "価格"
   },
   "register": {
-    "createAccount": "アカウントを作成",
-    "resentCode": "コード再送信"
+    "signUp" : "ユーザ登録",
+    "completed": "登録完了",
+    "register": "登録",
+    "registerDescription": "メールアドレスとパスワードを入力",
+    "confirm": "確認",
+    "confirmDescription": "認証コードを入力",
+    "complete": "完了",
+    "completeDescription": "事前登録プレゼントを入手！",
+    "mail": "メールアドレス",
+    "password": "パスワード",
+    "passwordRequirement" : "6文字以上、大文字小文字記号数字が必須です。",
+    "code" : "認証コードを入力",
+    "codeFromMail" : "メールボックスを確認してください。（見当たらない場合迷惑メールボックスも確認してください）",
+    "resentCode": "認証コードを再送",
+    "createAccount": "登録",
+    "invalidInput": "入力エラー",
+    "success": "事前登録成功!!!",
+    "goMarket": "事前登録ありがとうございました。マーケットも見ていってください。"
   }
 }
