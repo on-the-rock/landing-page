@@ -62,17 +62,16 @@ class Header extends Component {
                                     this.onResendCode()
                                 }}><FormattedMessage id="register.resentCode"/></button>}
                                 <br/>
-                                {!confirmMaleSent && <div className="ui labeled input">
-                                    <div className="ui label">
-                                        <FormattedMessage id="register.password"/>
-                                    </div>
-                                    <div className="inline field">
+                                {!confirmMaleSent &&
+                                    <div className="ui labeled input inline field">
+                                        <div className="ui label">
+                                            <FormattedMessage id="register.password"/>
+                                        </div>
                                         <input type="password" id="password" placeholder="Password"/>
                                         <div className="ui left pointing blue basic label">
                                             <FormattedMessage id="register.passwordRequirement"/>
                                         </div>
-                                    </div>
-                                </div>}
+                                    </div>}
                                 {!confirmMaleSent && <br/>}
                                 {!confirmMaleSent && <button className='ui primary button' onClick={e => {
                                     e.preventDefault()
@@ -88,15 +87,13 @@ class Header extends Component {
                                     <p> {errorMessage}</p>
                                 </div>}
                                 {confirmMaleSent && <div>
-                                    <div className="ui labeled input">
+                                    <div className="ui labeled input inline field">
                                         <div className="ui label">
                                             <FormattedMessage id="register.code"/>
                                         </div>
-                                        <div className="inline field">
-                                            <input type="text" id="code" placeholder="Email Address"/>
-                                            <div className="ui bellow pointing blue basic label">
-                                                <FormattedMessage id="register.codeFromMail"/>
-                                            </div>
+                                        <input type="text" id="code" placeholder="Email Address"/>
+                                        <div className="ui left pointing blue basic label">
+                                            <FormattedMessage id="register.codeFromMail"/>
                                         </div>
                                     </div>
                                     <br/>
