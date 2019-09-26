@@ -33,11 +33,10 @@ class Market extends Component {
     }
 
     render() {
-        const {handleOnChangeLanguage} = this.props;
         const {preSaleCards, isBlockChainDataLoaded, transactions} = this.state;
         return (
             <div className="pusher">
-                <Header handleOnChangeLanguage={handleOnChangeLanguage} activeIndex={1}/>
+                <Header activeIndex={1}/>
                 <div className='ui center aligned container'>
                     <h2 className="ui white header"><FormattedMessage id='market.preSale'/></h2>
                     <h3 className="ui white header"><FormattedMessage id='market.preSale1Header'/></h3>

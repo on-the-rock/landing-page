@@ -6,10 +6,9 @@ class PreRegister extends Component {
 
     render() {
         const {errorMessage, confirmMaleSent, success} = this.state
-        document.body.style = 'background: white;';
         return (
             <div id="signup" style={{height: '100vh'}}>
-                <h1>Sign Up</h1>
+                <h1 className='white'>Sign Up</h1>
                 <form name='form-signup'>
                     <div className="ui labeled input">
                         <div className="ui label">

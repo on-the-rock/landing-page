@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {FormattedMessage} from "react-intl";
-import Header from "../component/header.js";
+import Header from "../component/header";
 import Footer from "../component/footer";
 
 class Home extends Component {
     render() {
-        const {handleOnChangeLanguage} = this.props;
         return (
             <div className="pusher">
-                <Header handleOnChangeLanguage={handleOnChangeLanguage} activeIndex={0}/>
+                <Header activeIndex={0}/>
                 <div className="ui middle aligned stackable grid container">
                     <div className="row">
                         <div className="seven wide column">

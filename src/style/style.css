@@ -148,6 +148,14 @@
     top: 40% !important;
     left: 41% !important;
     width: 18%;
+    cursor:pointer;
+}
+.pre-register-button {
+    position: absolute !important;
+    top: 50% !important;
+    left: 35% !important;
+    width: 35%;
+    cursor:pointer;
 }
 
 .banner-text {
