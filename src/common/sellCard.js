@@ -20,7 +20,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/anti-magic-golem.png",
             "isMaster": "",
-            "price(ETH)": 0.05
+            "priceEther": 0.05
         },
         {
             "cardId": "",
@@ -38,7 +38,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/berserker.png",
             "isMaster": "",
-            "price(ETH)": 0.05
+            "priceEther": 0.05
         },
         {
             "cardId": "",
@@ -56,7 +56,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/gale-swordsman.png",
             "isMaster": "",
-            "price(ETH)": 0.025
+            "priceEther": 0.025
         },
         {
             "cardId": "",
@@ -74,7 +74,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/flash-swordman.png",
             "isMaster": "",
-            "price(ETH)": 0.025
+            "priceEther": 0.025
         },
         {
             "cardId": "",
@@ -92,7 +92,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/fairly.png",
             "isMaster": "",
-            "price(ETH)": 0.025
+            "priceEther": 0.025
         },
         {
             "cardId": "",
@@ -110,7 +110,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/curse-warrier.png",
             "isMaster": "",
-            "price(ETH)": 0.025
+            "priceEther": 0.025
         },
         {
             "cardId": "",
@@ -128,7 +128,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/quick-hit-archer.png",
             "isMaster": "",
-            "price(ETH)": 0.025
+            "priceEther": 0.025
         }
     ]
 }
