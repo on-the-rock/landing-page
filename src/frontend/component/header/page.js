@@ -123,7 +123,11 @@ class Header extends Component {
                                 <div className="header">
                                     <FormattedMessage id="register.success"/>
                                 </div>
-                                <p><a href='/market'><FormattedMessage id="register.goMarket"/></a></p>
+                                <p>
+                                    {/*<a href='/market'>*/}
+                                        <FormattedMessage id="register.goMarket"/>
+                                    {/*</a>*/}
+                                </p>
                             </div>}
                         </Modal.Content>
                     </Modal>

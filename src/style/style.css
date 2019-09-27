@@ -151,7 +151,7 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 1224px) {
     .pre-register-button {
         position: absolute !important;
         top: 45% !important;
@@ -161,7 +161,7 @@
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1224px) {
     .pre-register-button {
         position: absolute !important;
         top: 60% !important;
@@ -170,8 +170,6 @@
         cursor: pointer;
     }
 }
-
-
 
 .banner-text {
     position: absolute !important;
