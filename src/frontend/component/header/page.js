@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Dropdown, Image, Modal} from "semantic-ui-react";
 import {Auth} from 'aws-amplify';
 import {FormattedMessage} from "react-intl";
+import MediaQuery from 'react-responsive'
 
 class Header extends Component {
     state = {};
@@ -21,34 +22,36 @@ class Header extends Component {
                         <Modal.Header><FormattedMessage
                             id={success ? "register.completed" : "register.signUp"}/></Modal.Header>
                         <Modal.Content>
-                            <div className="ui tablet steps">
-                                <div className={"step " + (!confirmMaleSent ? "active" : "completed")}>
-                                    <i className="pencil alternate icon"/>
-                                    <div className="content">
-                                        <div className="title"><FormattedMessage id="register.register"/></div>
-                                        <div className="description"><FormattedMessage
-                                            id="register.registerDescription"/></div>
+                            <MediaQuery query='(min-width: 975px)'>
+                                <div className="ui steps">
+                                    <div className={"step " + (!confirmMaleSent ? "active" : "completed")}>
+                                        <i className="pencil alternate icon"/>
+                                        <div className="content">
+                                            <div className="title"><FormattedMessage id="register.register"/></div>
+                                            <div className="description"><FormattedMessage
+                                                id="register.registerDescription"/></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className={"step " + ((confirmMaleSent && !success) ? "active " : "") + (success && "completed")}>
+                                        <i className="eye icon"/>
+                                        <div className="content">
+                                            <div className="title"><FormattedMessage id="register.confirm"/></div>
+                                            <div className="description"><FormattedMessage
+                                                id="register.confirmDescription"/></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className={"step " + (confirmMaleSent && success && "active ") + (success && "completed")}>
+                                        <i className="thumbs up icon"/>
+                                        <div className="content">
+                                            <div className="title"><FormattedMessage id="register.complete"/></div>
+                                            <div className="description"><FormattedMessage
+                                                id="register.completeDescription"/></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div
-                                    className={"step " + ((confirmMaleSent && !success) ? "active " : "") + (success && "completed")}>
-                                    <i className="eye icon"/>
-                                    <div className="content">
-                                        <div className="title"><FormattedMessage id="register.confirm"/></div>
-                                        <div className="description"><FormattedMessage
-                                            id="register.confirmDescription"/></div>
-                                    </div>
-                                </div>
-                                <div
-                                    className={"step " + (confirmMaleSent && success && "active ") + (success && "completed")}>
-                                    <i className="thumbs up icon"/>
-                                    <div className="content">
-                                        <div className="title"><FormattedMessage id="register.complete"/></div>
-                                        <div className="description"><FormattedMessage
-                                            id="register.completeDescription"/></div>
-                                    </div>
-                                </div>
-                            </div>
+                            </MediaQuery>
                             {!success && <form name='form-signup'>
                                 <div className="ui labeled input">
                                     <div className="ui label">
@@ -63,15 +66,15 @@ class Header extends Component {
                                 }}><FormattedMessage id="register.resentCode"/></button>}
                                 <br/>
                                 {!confirmMaleSent &&
-                                    <div className="ui labeled input inline field">
-                                        <div className="ui label">
-                                            <FormattedMessage id="register.password"/>
-                                        </div>
-                                        <input type="password" id="password" placeholder="Password"/>
-                                        <div className="ui left pointing blue basic label">
-                                            <FormattedMessage id="register.passwordRequirement"/>
-                                        </div>
-                                    </div>}
+                                <div className="ui labeled input inline field">
+                                    <div className="ui label">
+                                        <FormattedMessage id="register.password"/>
+                                    </div>
+                                    <input type="password" id="password" placeholder="Password"/>
+                                    <div className="ui left pointing blue basic label">
+                                        <FormattedMessage id="register.passwordRequirement"/>
+                                    </div>
+                                </div>}
                                 {!confirmMaleSent && <br/>}
                                 {!confirmMaleSent && <button className='ui primary button' onClick={e => {
                                     e.preventDefault()
