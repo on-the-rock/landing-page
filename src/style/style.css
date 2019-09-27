@@ -148,15 +148,30 @@
     top: 40% !important;
     left: 41% !important;
     width: 18%;
-    cursor:pointer;
+    cursor: pointer;
 }
-.pre-register-button {
-    position: absolute !important;
-    top: 45% !important;
-    left: 38% !important;
-    width: 25%;
-    cursor:pointer;
+
+@media screen and (min-width: 780px) {
+    .pre-register-button {
+        position: absolute !important;
+        top: 45% !important;
+        left: 38% !important;
+        width: 25%;
+        cursor: pointer;
+    }
 }
+
+@media screen and (max-width: 780px) {
+    .pre-register-button {
+        position: absolute !important;
+        top: 60% !important;
+        left: 5% !important;
+        width: 90%;
+        cursor: pointer;
+    }
+}
+
+
 
 .banner-text {
     position: absolute !important;
@@ -235,7 +250,7 @@ h2.ui.header {
     width: 33%;
 }
 
-body,html {
+body, html {
     height: auto !important;
     width: 100%;
     background: #1A496F;
