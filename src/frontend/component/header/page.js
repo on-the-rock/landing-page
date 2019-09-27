@@ -21,7 +21,7 @@ class Header extends Component {
                         <Modal.Header><FormattedMessage
                             id={success ? "register.completed" : "register.signUp"}/></Modal.Header>
                         <Modal.Content>
-                            <div className="ui tablet stackable steps">
+                            <div className="ui tablet steps">
                                 <div className={"step " + (!confirmMaleSent ? "active" : "completed")}>
                                     <i className="pencil alternate icon"/>
                                     <div className="content">
@@ -128,8 +128,8 @@ class Header extends Component {
                         <div className="ui small secondary inverted menu">
                             <div className="right item">
                                 <a className={activeIndex === 0 ? "active item" : "item"} href="/">Home</a>
-                                <a className={activeIndex === 1 ? "active item" : "item"} href="market">Market</a>
-                                <a className={activeIndex === 2 ? "active item" : "item"}>Company</a>
+                                {/*<a className={activeIndex === 1 ? "active item" : "item"} href="market">Market</a>*/}
+                                {/*<a className={activeIndex === 2 ? "active item" : "item"}>Company</a>*/}
                                 <Dropdown text='Language'>
                                     <Dropdown.Menu>
                                         <Dropdown.Item text='English' onClick={e => {
