@@ -35,7 +35,6 @@ function localesReducer(state = {}, action) {
 const persistConfig = {
     key: 'FrameCBattle.landing',
     storage,
-    blacklist:'intl.messages'
 };
 
 const reducers = combineReducers({

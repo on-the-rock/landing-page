@@ -55,5 +55,18 @@
     "invalidInput": "Invalid input",
     "success": "pre-register successfully!!!",
     "goMarket": "Thank you for pre-register"
+  },
+  "qa": {
+    "howToPreRegister": "How can I pre-register?",
+    "here": "Click here ",
+    "howToPreRegisterSentence": "and enter E-mail,password and verification code",
+    "isNFTNeeded": "Is nft-asset needed to play this game？",
+    "isNFTNeededSentence": "nft-asset is not needed basically, but if you want to create your own card, you need nft-asset and wallet.",
+    "isFrameNeeded": "Buying frames are needed to play games？",
+    "isFrameNeededSentence": "You can battle even if you don't buy frame. You have many frames when you start game.",
+    "howToGetPresent": "How can I get pre-register present.",
+    "howToGetPresentSentence": "please wait until start formal game service.",
+    "whenBetaTest": "When will open beta test start？",
+    "whenBetaTestSentence" : "we are plan to in this year"
   }
 }
