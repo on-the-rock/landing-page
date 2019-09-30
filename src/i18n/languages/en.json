@@ -67,6 +67,9 @@
     "howToGetPresent": "How can I get pre-register present.",
     "howToGetPresentSentence": "please wait until start formal game service.",
     "whenBetaTest": "When will open beta test start？",
-    "whenBetaTestSentence" : "we are plan to in this year"
+    "whenBetaTestSentence" : "we are plan to in this year",
+    "whatNFTCanIUse" : "What kind of NFT-asset can I use?",
+    "whatNFTCanIUseSentence": "Token which is made following ERC721 standard, however it is limited to have public API for get image."
+
   }
 }

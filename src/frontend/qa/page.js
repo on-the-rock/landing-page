@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FormattedHTMLMessage, FormattedMessage} from "react-intl";
+import {FormattedMessage} from "react-intl";
 import Header from "../component/header";
 import Footer from "../component/footer";
 import PreRegister from "../component/preRegister";
@@ -17,8 +17,12 @@ class QA extends Component {
                 <p className="gray"><FormattedMessage id='qa.isNFTNeededSentence'/></p>
                 <h2 className="white ui header"><FormattedMessage id='qa.isFrameNeeded'/></h2>
                 <p className="gray"><FormattedMessage id='qa.isFrameNeededSentence'/></p>
-                <h2 className="white ui header"><FormattedMessage id='qa.howToGetPresent'/></h2>
-                <p className="gray"><FormattedHTMLMessage id='qa.howToGetPresentSentence'/></p>
+                {/*<h2 className="white ui header"><FormattedMessage id='qa.howToGetPresent'/></h2>*/}
+                {/*<p className="gray"><FormattedMessage id='qa.howToGetPresentSentence'/></p>*/}
+                <h2 className="white ui header"><FormattedMessage id='qa.whenBetaTest'/></h2>
+                <p className="gray"><FormattedMessage id='qa.whenBetaTestSentence'/></p>
+                <h2 className="white ui header"><FormattedMessage id='qa.whatNFTCanIUse'/></h2>
+                <p className="gray"><FormattedMessage id='qa.whatNFTCanIUseSentence'/></p>
                 <Footer/>
             </div>
         );
