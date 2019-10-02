@@ -6,7 +6,8 @@ import {Modal} from "semantic-ui-react";
 
 
 class Page extends Component {
-    state={}
+    state = {}
+
     render() {
         const {errorMessage, confirmMaleSent, success} = this.state
         const {trigger} = this.props;
@@ -64,10 +65,18 @@ class Page extends Component {
                                 <FormattedMessage id="register.password"/>
                             </div>
                             <input type="password" id="password" placeholder="Password"/>
-                            <div className="ui left pointing blue basic label">
+                            <MediaQuery query='(min-width: 768px)'>
+                                <div className="ui left pointing blue basic label">
+                                    <FormattedMessage id="register.passwordRequirement"/>
+                                </div>
+                            </MediaQuery>
+                        </div>}
+                        {!confirmMaleSent &&
+                        <MediaQuery query='(max-width: 767px)'>
+                            <div className="ui pointing blue basic label" style={{whiteSpace: 'pre'}}>
                                 <FormattedMessage id="register.passwordRequirement"/>
                             </div>
-                        </div>}
+                        </MediaQuery>}
                         {!confirmMaleSent && <br/>}
                         {!confirmMaleSent && <button className='ui primary button' onClick={e => {
                             e.preventDefault()
@@ -88,10 +97,17 @@ class Page extends Component {
                                     <FormattedMessage id="register.code"/>
                                 </div>
                                 <input type="text" id="code" placeholder="Email Address"/>
-                                <div className="ui left pointing blue basic label">
+                                <MediaQuery query='(min-width: 768px)'>
+                                    <div className="ui left pointing blue basic label">
+                                        <FormattedMessage id="register.codeFromMail"/>
+                                    </div>
+                                </MediaQuery>
+                            </div>
+                            <MediaQuery query='(max-width: 767px)'>
+                                <div className="ui pointing blue basic label">
                                     <FormattedMessage id="register.codeFromMail"/>
                                 </div>
-                            </div>
+                            </MediaQuery>
                             <br/>
                             <button className='ui primary button' onClick={e => {
                                 e.preventDefault()
@@ -126,6 +142,7 @@ class Page extends Component {
             </Modal>
         );
     }
+
     onSignUp() {
         const email = document.getElementById("email").value
         const password = document.getElementById("password").value
@@ -183,7 +200,6 @@ class Page extends Component {
         });
     }
 }
-
 
 
 export default Page;
