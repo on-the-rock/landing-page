@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FormattedMessage} from "react-intl";
+import {FormattedHTMLMessage, FormattedMessage} from "react-intl";
 import Header from "../component/header";
 import BlockChainApi from "../../api/blockChainApi";
 import sellCards from "../../common/sellCard";
@@ -47,10 +47,18 @@ class Market extends Component {
 
     render() {
         const {preSaleCards, marketCards, isBlockChainDataLoaded, transactions} = this.state;
+        const {intl} = this.props
         return (
             <div className="pusher">
                 <Header activeIndex={1}/>
                 <div className='ui center aligned container'>
+                    {intl.locale ==="ja" && <div>
+                        <h2 className="ui white header">購入方法</h2>
+                        <h3 className="ui white header">1.MetaMaskを使う(Google Chromeをお使いのお客様)</h3>
+                        <p className="ui gray text"><a href="https://metamask.io/">MetaMask</a>をChrome extensionに追加して、MetaMaskにログインした状態でこのページをご覧ください。</p>
+                        <h3 className="ui white header">2.HBWalletを使う</h3>
+                        <p className="ui gray text"><a href="https://www.hb-wallet.com/download-jp">HB Wallet</a>をダウンロードして、Wallet内蔵ブラウザからこのページをご覧ください。</p>
+                    </div>}
                     <h2 className="ui white header"><FormattedMessage id='market.preSale'/></h2>
                     <h3 className="ui white header"><FormattedMessage id='market.preSale1Header'/></h3>
                     <p className="gray"><FormattedMessage id='market.preSale1Text'/></p>
