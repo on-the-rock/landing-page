@@ -96,9 +96,10 @@ class Market extends Component {
                     <h3 className="ui white header"><FormattedMessage id='market.preSale2Header'/></h3>
                     <p className="gray"><FormattedMessage id='market.preSale2Text'/></p>
                     <div
-                        className="ui grid">
+                        className="ui center aligned grid">
                         {marketCards.map(card => {
-                            return <div className='ui eight wide column center aligned' key={card.cardNo}>
+                            console.log(card.priceEther)
+                            return <div className='ui five wide column center aligned' key={card.cardNo}>
                                 <h3 className="ui white header">{card.cardNameJa}</h3>
                                 <img src={card.imageURL}
                                      alt={card.cardNameJa}

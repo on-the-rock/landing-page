@@ -20,7 +20,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/anti-magic-golem.png",
             "isMaster": "",
-            "priceEther": 0.05
+            "priceEther": 0.1
         },
         {
             "cardId": "",
@@ -38,12 +38,12 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/berserker.png",
             "isMaster": "",
-            "priceEther": 0.05
+            "priceEther": 0.1
         },
         {
             "cardId": "",
             "cardNo": 1105,
-            "cardName": "gale swordsman（ninja）",
+            "cardName": "gale swordsman",
             "cardNameJa": "疾風の剣士",
             "attack": 3,
             "hitPoint": 3,
@@ -55,24 +55,6 @@ const sellCards = {
                 4
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/gale-swordsman.png",
-            "isMaster": "",
-            "priceEther": 0.025
-        },
-        {
-            "cardId": "",
-            "cardNo": 1106,
-            "cardName": "flash swordman（holy knight）",
-            "cardNameJa": "閃光の剣士",
-            "attack": 3,
-            "hitPoint": 3,
-            "rarity": 2,
-            "cost": 2,
-            "attribute": 3,
-            "attackType": "",
-            "specials": [
-                3
-            ],
-            "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/flash-swordman.png",
             "isMaster": "",
             "priceEther": 0.025
         },
@@ -92,7 +74,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/fairly.png",
             "isMaster": "",
-            "priceEther": 0.025
+            "priceEther": 0.05
         },
         {
             "cardId": "",
@@ -110,7 +92,7 @@ const sellCards = {
             ],
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/curse-warrier.png",
             "isMaster": "",
-            "priceEther": 0.025
+            "priceEther": 0.01
         },
         {
             "cardId": "",
