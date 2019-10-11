@@ -7,7 +7,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm --max-old-space-size=2048 run build
+      - npm --max-old-space-size=4096 run build
   post_build:
     commands:
       - tar cf /tmp/node_modules.tar node_modules
