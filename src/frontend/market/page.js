@@ -57,17 +57,20 @@ class Market extends Component {
                     <h2 className="ui white header"><FormattedMessage id='market.preSale'/></h2>
                     <h3 className="ui white header"><FormattedMessage id='market.preSale1Header'/></h3>
                     <p className="gray"><FormattedMessage id='market.preSale1Text'/></p>
-                    <div className='ui grid'>
+                    <div className='ui stackable grid'>
                         {preSaleCards.map(card => {
-                            return <div className='ui eight wide column center aligned' key={card.cardNo}>
+                            return <div className='ui eight wide  column center aligned' key={card.cardNo}>
                                 <h3 className="ui white header">{card.cardNameJa}</h3>
                                 <img src={card.imageURL}
                                      alt={card.cardNameJa}
                                      className='ui fluid center aligned image'/>
+
+                                    <div className='ui gray text'>
+                                        <FormattedMessage id='market.price'/>:{card.priceEther}ETH
+                                        <br/>
+                                    </div>
                                 {isBlockChainDataLoaded &&
                                 <div className='ui gray text'>
-                                    <FormattedMessage id='market.price'/>:{card.priceEther}ETH
-                                    <br/>
                                     <FormattedMessage
                                         id='market.remains'/>:{card.remains.length}/<FormattedMessage
                                     id='market.totalSupply'/>:{card.tokens.length}</div>}
@@ -99,23 +102,24 @@ class Market extends Component {
                     <h3 className="ui white header"><FormattedMessage id='market.preSale2Header'/></h3>
                     <p className="gray"><FormattedMessage id='market.preSale2Text'/></p>
                     <div
-                        className="ui center aligned grid">
+                        className="ui center aligned stackable grid">
                         {marketCards.map(card => {
-                            console.log(card.priceEther)
                             return <div className='ui five wide column center aligned' key={card.cardNo}>
                                 <h3 className="ui white header">{card.cardNameJa}</h3>
                                 <img src={card.imageURL}
                                      alt={card.cardNameJa}
                                      className='ui fluid center aligned image'/>
-                                {isBlockChainDataLoaded &&
                                 <div className='ui gray text'>
                                     <FormattedMessage id='market.price'/>:{card.priceEther}ETH
                                     <br/>
+                                </div>
+                                {isBlockChainDataLoaded &&
+                                <div className='ui gray text'>
                                     <FormattedMessage
                                         id='market.remains'/>:{card.remains.length}/<FormattedMessage
                                     id='market.totalSupply'/>:{card.tokens.length}</div>}
                                 <button
-                                    className={"ui large primary center aligned button " + (isBlockChainDataLoaded && card.remains && card.remains.length === 0 && "disabled")}
+                                    className={"ui large primary center aligned button " + (!isBlockChainDataLoaded || (card.remains && card.remains.length === 0) && "disabled")}
                                     onClick={async e => {
                                         await this.onPurchase(card.cardNo)
                                     }}>
@@ -145,7 +149,7 @@ class Market extends Component {
                     <p className="gray"><FormattedMessage id='market.preSale4Text'/></p>
                     {intl.locale === "ja" && <div>
                         <h2 className="ui white header">購入方法</h2>
-                        <div className='ui grid'>
+                        <div className='ui stackable grid'>
                             <div className='eight wide column'>
                                 <h3 className="ui white header">1.MetaMaskを使う(Google Chromeをお使いのお客様)</h3>
                                 <p className="ui gray text"><a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=ja">MetaMask</a>をChrome
