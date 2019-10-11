@@ -42,24 +42,6 @@ const sellCards = {
         },
         {
             "cardId": "",
-            "cardNo": 1105,
-            "cardName": "gale swordsman",
-            "cardNameJa": "疾風の剣士",
-            "attack": 3,
-            "hitPoint": 3,
-            "rarity": 2,
-            "cost": 3,
-            "attribute": 3,
-            "attackType": "",
-            "specials": [
-                4
-            ],
-            "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/gale-swordsman.png",
-            "isMaster": "",
-            "priceEther": 0.025
-        },
-        {
-            "cardId": "",
             "cardNo": 1107,
             "cardName": "fairly ",
             "cardNameJa": "フェアリー",
@@ -78,24 +60,6 @@ const sellCards = {
         },
         {
             "cardId": "",
-            "cardNo": 1108,
-            "cardName": "curse warrier",
-            "cardNameJa": "カースウォーリア",
-            "attack": 2,
-            "hitPoint": 3,
-            "rarity": 2,
-            "cost": 2,
-            "attribute": 2,
-            "attackType": "",
-            "specials": [
-                8
-            ],
-            "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/curse-warrier.png",
-            "isMaster": "",
-            "priceEther": 0.01
-        },
-        {
-            "cardId": "",
             "cardNo": 1109,
             "cardName": "quick hit archer",
             "cardNameJa": "早打ちのアーチャー",
@@ -111,6 +75,42 @@ const sellCards = {
             "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/quick-hit-archer.png",
             "isMaster": "",
             "priceEther": 0.025
+        },
+        {
+            "cardId": "",
+            "cardNo": 1105,
+            "cardName": "gale swordsman",
+            "cardNameJa": "疾風の剣士",
+            "attack": 3,
+            "hitPoint": 3,
+            "rarity": 2,
+            "cost": 3,
+            "attribute": 3,
+            "attackType": "",
+            "specials": [
+                4
+            ],
+            "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/gale-swordsman.png",
+            "isMaster": "",
+            "priceEther": 0.025
+        },
+        {
+            "cardId": "",
+            "cardNo": 1108,
+            "cardName": "curse warrier",
+            "cardNameJa": "カースウォーリアー",
+            "attack": 2,
+            "hitPoint": 3,
+            "rarity": 2,
+            "cost": 2,
+            "attribute": 2,
+            "attackType": "",
+            "specials": [
+                8
+            ],
+            "imageURL": "https://d1wwbe44qvngmh.cloudfront.net/images/curse-warrier.png",
+            "isMaster": "",
+            "priceEther": 0.01
         }
     ]
 }
