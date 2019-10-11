@@ -37,6 +37,7 @@
     "price": "price"
   },
   "register": {
+    "preRegister": "pre-register",
     "signUp" : "Sign up",
     "completed": "Completed",
     "register": "Resister",

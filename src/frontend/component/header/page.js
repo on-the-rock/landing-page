@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Dropdown} from "semantic-ui-react";
 import PreRegister from "../preRegister";
+import {FormattedMessage} from "react-intl";
 
 class Header extends Component {
     state = {};
@@ -27,7 +28,7 @@ class Header extends Component {
                                 <a className={activeIndex === 1 ? "active item" : "item"} href="market">Market</a>
                                 {/*<a className={activeIndex === 2 ? "active item" : "item"}>Company</a>*/}
                                 <a className={activeIndex === 3 ? "active item" : "item"} href="/qa">Q&A</a>
-                                <PreRegister trigger={<a className="item">事前登録</a>}/>
+                                <PreRegister trigger={<a className="item"><FormattedMessage id="register.preRegister"/></a>}/>
                                 <Dropdown text='Language'>
                                     <Dropdown.Menu>
                                         <Dropdown.Item text='English' onClick={e => {

@@ -37,6 +37,7 @@
     "price": "価格"
   },
   "register": {
+    "preRegister": "事前登録",
     "signUp": "ユーザ登録",
     "completed": "登録完了",
     "register": "登録",
