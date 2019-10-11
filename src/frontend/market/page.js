@@ -64,7 +64,6 @@ class Market extends Component {
                                 <img src={card.imageURL}
                                      alt={card.cardNameJa}
                                      className='ui fluid center aligned image'/>
-
                                     <div className='ui gray text'>
                                         <FormattedMessage id='market.price'/>:{card.priceEther}ETH
                                         <br/>
@@ -75,7 +74,7 @@ class Market extends Component {
                                         id='market.remains'/>:{card.remains.length}/<FormattedMessage
                                     id='market.totalSupply'/>:{card.tokens.length}</div>}
                                 <button
-                                    className={"ui large primary center aligned button " + (isBlockChainDataLoaded && card.remains && card.remains.length === 0 && "disabled")}
+                                    className={"ui large primary center aligned button "  + (!isBlockChainDataLoaded || (card.remains && card.remains.length === 0) ? "disabled" : "")}
                                     onClick={async e => {
                                         await this.onPurchase(card.cardNo)
                                     }}>
@@ -119,7 +118,7 @@ class Market extends Component {
                                         id='market.remains'/>:{card.remains.length}/<FormattedMessage
                                     id='market.totalSupply'/>:{card.tokens.length}</div>}
                                 <button
-                                    className={"ui large primary center aligned button " + (!isBlockChainDataLoaded || (card.remains && card.remains.length === 0) && "disabled")}
+                                    className={"ui large primary center aligned button " + (!isBlockChainDataLoaded || (card.remains && card.remains.length === 0) ? "disabled" : "")}
                                     onClick={async e => {
                                         await this.onPurchase(card.cardNo)
                                     }}>

@@ -25,7 +25,7 @@ class Header extends Component {
                         <div className="ui small secondary inverted menu">
                             <div className="right item">
                                 <a className={activeIndex === 0 ? "active item" : "item"} href="/">Home</a>
-                                <a className={activeIndex === 1 ? "active item" : "item"} href="market">Market</a>
+                                <a className={activeIndex === 1 ? "active item" : "item"} href="market"><FormattedMessage id="market.preSale"/></a>
                                 {/*<a className={activeIndex === 2 ? "active item" : "item"}>Company</a>*/}
                                 <a className={activeIndex === 3 ? "active item" : "item"} href="/qa">Q&A</a>
                                 <PreRegister trigger={<a className="item"><FormattedMessage id="register.preRegister"/></a>}/>
