@@ -16,33 +16,35 @@ class Market extends Component {
         if (!BlockChainApi.isBlockchainLoaded()) {
             await BlockChainApi.loadBlockChain();
         }
-        this.setState({
-            isBlockChainDataLoaded: true,
-            preSaleCards: await asyncMap(sellCards.preSale, async card => {
-                const tokens = await BlockChainApi.listTokenIdsByCardNo(card.cardNo);
-                const remainingTokens = await asyncFilter(tokens, async token => {
-                    const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
-                    return price !== 0
-                });
-                return {
-                    ...card,
-                    tokens: tokens,
-                    remains: remainingTokens
-                }
-            }),
-            marketCards: await asyncMap(sellCards.market, async card => {
-                const tokens = await BlockChainApi.listTokenIdsByCardNo(card.cardNo);
-                const remainingTokens = await asyncFilter(tokens, async token => {
-                    const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
-                    return price !== 0
-                });
-                return {
-                    ...card,
-                    tokens: tokens,
-                    remains: remainingTokens
-                }
+        if(BlockChainApi.isBlockchainLoaded()) {
+            this.setState({
+                isBlockChainDataLoaded: true,
+                preSaleCards: await asyncMap(sellCards.preSale, async card => {
+                    const tokens = await BlockChainApi.listTokenIdsByCardNo(card.cardNo);
+                    const remainingTokens = await asyncFilter(tokens, async token => {
+                        const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
+                        return price !== 0
+                    });
+                    return {
+                        ...card,
+                        tokens: tokens,
+                        remains: remainingTokens
+                    }
+                }),
+                marketCards: await asyncMap(sellCards.market, async card => {
+                    const tokens = await BlockChainApi.listTokenIdsByCardNo(card.cardNo);
+                    const remainingTokens = await asyncFilter(tokens, async token => {
+                        const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
+                        return price !== 0
+                    });
+                    return {
+                        ...card,
+                        tokens: tokens,
+                        remains: remainingTokens
+                    }
+                })
             })
-        })
+        }
     }
 
     render() {
@@ -52,13 +54,6 @@ class Market extends Component {
             <div className="pusher">
                 <Header activeIndex={1}/>
                 <div className='ui center aligned container'>
-                    {intl.locale ==="ja" && <div>
-                        <h2 className="ui white header">購入方法</h2>
-                        <h3 className="ui white header">1.MetaMaskを使う(Google Chromeをお使いのお客様)</h3>
-                        <p className="ui gray text"><a href="https://metamask.io/">MetaMask</a>をChrome extensionに追加して、MetaMaskにログインした状態でこのページをご覧ください。</p>
-                        <h3 className="ui white header">2.HBWalletを使う</h3>
-                        <p className="ui gray text"><a href="https://www.hb-wallet.com/download-jp">HB Wallet</a>をダウンロードして、Wallet内蔵ブラウザからこのページをご覧ください。</p>
-                    </div>}
                     <h2 className="ui white header"><FormattedMessage id='market.preSale'/></h2>
                     <h3 className="ui white header"><FormattedMessage id='market.preSale1Header'/></h3>
                     <p className="gray"><FormattedMessage id='market.preSale1Text'/></p>
@@ -71,7 +66,7 @@ class Market extends Component {
                                      className='ui fluid center aligned image'/>
                                 {isBlockChainDataLoaded &&
                                 <div className='ui gray text'>
-                                    <FormattedMessage id='market.price'/>:{card.priceEther}ether
+                                    <FormattedMessage id='market.price'/>:{card.priceEther}ETH
                                     <br/>
                                     <FormattedMessage
                                         id='market.remains'/>:{card.remains.length}/<FormattedMessage
@@ -114,7 +109,7 @@ class Market extends Component {
                                      className='ui fluid center aligned image'/>
                                 {isBlockChainDataLoaded &&
                                 <div className='ui gray text'>
-                                    <FormattedMessage id='market.price'/>:{card.priceEther}ether
+                                    <FormattedMessage id='market.price'/>:{card.priceEther}ETH
                                     <br/>
                                     <FormattedMessage
                                         id='market.remains'/>:{card.remains.length}/<FormattedMessage
@@ -148,6 +143,27 @@ class Market extends Component {
                     <p className="gray"><FormattedMessage id='market.preSale3Text'/></p>
                     <h3 className="ui white header"><FormattedMessage id='market.preSale4Header'/></h3>
                     <p className="gray"><FormattedMessage id='market.preSale4Text'/></p>
+                    {intl.locale === "ja" && <div>
+                        <h2 className="ui white header">購入方法</h2>
+                        <div className='ui grid'>
+                            <div className='eight wide column'>
+                                <h3 className="ui white header">1.MetaMaskを使う(Google Chromeをお使いのお客様)</h3>
+                                <p className="ui gray text"><a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=ja">MetaMask</a>をChrome
+                                    extensionに追加して、MetaMaskにログインした状態でこのページをご覧ください。</p>
+                                <img className='ui centered image' alt="use MetaMask"
+                                     src='https://d1wwbe44qvngmh.cloudfront.net/images/metamask-click-here.png'/>
+                            </div>
+                            <div className='eight wide column'>
+                                <h3 className="ui white header">2.HBWalletを使う</h3>
+                                <p className="ui gray text"><a href="https://www.hb-wallet.com/download-jp">HB
+                                    Wallet</a>をダウンロードして、Wallet内蔵ブラウザからこのページをご覧ください。
+                                </p>
+                                <br/>
+                                <img className='ui centered image' alt="use hbwallet"
+                                     src='https://d1wwbe44qvngmh.cloudfront.net/images/hb-Wallet-frame.png'/>
+                            </div>
+                        </div>
+                    </div>}
                 </div>
                 <Footer/>
             </div>
@@ -163,48 +179,52 @@ class Market extends Component {
         if (!BlockChainApi.isBlockchainLoaded()) {
             await BlockChainApi.loadBlockChain();
         }
-        const tokens = await BlockChainApi.listTokenIdsByCardNo(cardNo);
-        let tokenPrice = 0;
-        console.log('tokens:', tokens)
-        const remainingTokens = await asyncFilter(tokens, async token => {
-            console.log('token:', token)
-            const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
-            console.log('price:', price)
-            console.log(price !== 0)
-            tokenPrice = tokenPrice !== 0 ? tokenPrice : price;
-            return price !== 0
-        })
-        console.log('remaining tokens:', remainingTokens);
-        try {
-            await BlockChainApi.purchase(remainingTokens[0], tokenPrice,
-                transactionHash => {
-                    this.setState({
-                        transactions: {[cardNo]: {status: 'processing', transactionHash: transactionHash}},
-                    })
-                },
-                receipt => {
-                    this.setState({
-                        transactions: {[cardNo]: {status: 'success', transactionHash: receipt.transactionHash}},
-                    })
-                },
-                (error, receipt) => {
-                    if (!transactions[cardNo]) {
-                        //User denied transaction
-                        return
-                    }
-                    this.setState({
-                        transactions: {
-                            [cardNo]: {
-                                ...transactions[cardNo],
-                                status: 'error',
-                                error: error.toString()
-                            }
+        if(BlockChainApi.isBlockchainLoaded()) {
+            const tokens = await BlockChainApi.listTokenIdsByCardNo(cardNo);
+            let tokenPrice = 0;
+            console.log('tokens:', tokens)
+            const remainingTokens = await asyncFilter(tokens, async token => {
+                console.log('token:', token)
+                const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
+                console.log('price:', price)
+                console.log(price !== 0)
+                tokenPrice = tokenPrice !== 0 ? tokenPrice : price;
+                return price !== 0
+            })
+            console.log('remaining tokens:', remainingTokens);
+            try {
+                await BlockChainApi.purchase(remainingTokens[0], tokenPrice,
+                    transactionHash => {
+                        this.setState({
+                            transactions: {[cardNo]: {status: 'processing', transactionHash: transactionHash}},
+                        })
+                    },
+                    receipt => {
+                        this.setState({
+                            transactions: {[cardNo]: {status: 'success', transactionHash: receipt.transactionHash}},
+                        })
+                    },
+                    (error, receipt) => {
+                        if (!transactions[cardNo]) {
+                            //User denied transaction
+                            return
                         }
-                    })
-                });
-        } catch (e) {
-            // user denied transaction
-            console.error(e)
+                        this.setState({
+                            transactions: {
+                                [cardNo]: {
+                                    ...transactions[cardNo],
+                                    status: 'error',
+                                    error: error.toString()
+                                }
+                            }
+                        })
+                    });
+            } catch (e) {
+                // user denied transaction
+                console.error(e)
+            }
+        } else{
+            //TODO: metamaskをインストールさせる
         }
     }
 }

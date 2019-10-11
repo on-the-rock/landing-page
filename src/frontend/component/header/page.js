@@ -18,15 +18,16 @@ class Header extends Component {
                          src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'
                          alt='banner'/>
                     <PreRegister trigger={<img className='pre-register-button'
-                                               src={intl.locale === 'ja' ? 'https://d1wwbe44qvngmh.cloudfront.net/images/button-jp.png' : 'https://d1wwbe44qvngmh.cloudfront.net/images/button-en.png'}
+                                               src={intl.locale === 'ja' ? 'https://d1wwbe44qvngmh.cloudfront.net/images/pre-register-click.png' : 'https://d1wwbe44qvngmh.cloudfront.net/images/button-en.png'}
                                                alt='start'/>}/>
                     <div className="ui container absolute-menu">
                         <div className="ui small secondary inverted menu">
                             <div className="right item">
                                 <a className={activeIndex === 0 ? "active item" : "item"} href="/">Home</a>
-                                {/*<a className={activeIndex === 1 ? "active item" : "item"} href="market">Market</a>*/}
+                                <a className={activeIndex === 1 ? "active item" : "item"} href="market">Market</a>
                                 {/*<a className={activeIndex === 2 ? "active item" : "item"}>Company</a>*/}
                                 <a className={activeIndex === 3 ? "active item" : "item"} href="/qa">Q&A</a>
+                                <PreRegister trigger={<a className="item">事前登録</a>}/>
                                 <Dropdown text='Language'>
                                     <Dropdown.Menu>
                                         <Dropdown.Item text='English' onClick={e => {
