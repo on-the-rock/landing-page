@@ -34,7 +34,9 @@
     "purchase": "購入",
     "remains": "残枚数",
     "totalSupply": "総発行量",
-    "price": "価格"
+    "price": "価格",
+    "cancelPreSale": "プレセール中断のお知らせ",
+    "cancelPreSaleText" : "TomoChainへの移行に伴いプレセールを中断します。TomoChainへの移行に伴う返金・移管の方法については公式Twitterからの案内をご覧ください。。"
   },
   "register": {
     "preRegister": "事前登録",

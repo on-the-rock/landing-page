@@ -34,7 +34,9 @@
     "purchase": "purchase",
     "remains": "remains",
     "totalSupply": "totalSupply",
-    "price": "price"
+    "price": "price",
+    "cancelPreSale": "Cancel presale",
+    "cancelPreSaleText" : "We cancel presale. For more information, please sea official Twitter."
   },
   "register": {
     "preRegister": "pre-register",
