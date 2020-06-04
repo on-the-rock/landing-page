@@ -17,7 +17,7 @@ const initialState = {
         locale: 'ja',
         messages: flatten(ja.default),
     },
-}
+};
 
 function localesReducer(state = {}, action) {
     switch (action.type) {
