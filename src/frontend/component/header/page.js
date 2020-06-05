@@ -32,7 +32,6 @@ class Header extends Component {
                   id="market.preSale"/></a>
                 {/*<a className={activeIndex === 2 ? "active item" : "item"}>Company</a>*/}
                 <a className={activeIndex === 3 ? "active item" : "item"} href="/qa">Q&A</a>
-                <PreRegister trigger={<a className="item"><FormattedMessage id="register.preRegister"/></a>}/>
                 <Dropdown text='Language'>
                   <Dropdown.Menu>
                     <Dropdown.Item text='English' onClick={e => {
