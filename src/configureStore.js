@@ -2,6 +2,7 @@ import {combineReducers, createStore} from 'redux'
 import {persistReducer, persistStore} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import * as ja from './i18n/languages/ja'
+import * as en from './i18n/languages/en'
 import {addLocaleData} from 'react-intl';
 import jaLocaleData from 'react-intl/locale-data/ja';
 import enLocaleData from 'react-intl/locale-data/en';
@@ -12,10 +13,16 @@ import flatten from 'flat'
 addLocaleData(enLocaleData);
 addLocaleData(jaLocaleData);
 
+const messages ={
+    ja: flatten(ja.default),
+    en: flatten(en.default)
+};
+const locale =
+  (window.navigator.languages && window.navigator.languages[0]) || "ja";
 const initialState = {
     intl: {
-        locale: 'ja',
-        messages: flatten(ja.default),
+        locale: locale,
+        messages: messages[locale],
     },
 };
 

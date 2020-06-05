@@ -186,8 +186,6 @@
 }
 
 .banner {
-    background: url("https://d1wwbe44qvngmh.cloudfront.net/images/banner-bg.png") center bottom;
-    background-size: cover;
     padding-bottom: 25%;
     max-height: 700px;
 }

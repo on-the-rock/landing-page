@@ -49,22 +49,21 @@ class Market extends Component {
 
   render() {
     const {preSaleCards, marketCards, isBlockChainDataLoaded, transactions} = this.state;
+    const {intl} = this.props
     return (
       <div className="pusher">
         <Header activeIndex={1}/>
         <div className='ui center aligned container'>
           <h2 className="ui white header"><FormattedMessage id='market.preSale'/></h2>
-          <h3 className="ui white header"><FormattedMessage id='market.preSale1Header'/></h3>
-          <p className="gray"><FormattedMessage id='market.preSale1Text'/></p>
           <div className='ui stackable grid'>
             {preSaleCards.map(card => {
               return <div className='ui eight wide  column center aligned' key={card.cardNo}>
-                <h3 className="ui white header">{card.cardNameJa}</h3>
-                <img src={card.imageURL}
-                     alt={card.cardNameJa}
+                <h3 className="ui white header">{intl.locale === "ja" ? card.cardNameJa : card.cardName}</h3>
+                <img src={getLocalizedURL(intl.locale, card.imageURL)}
+                     alt={intl.locale === "ja" ? card.cardNameJa : card.cardName}
                      className='ui fluid center aligned image'/>
                 <div className='ui gray text'>
-                  <FormattedMessage id='market.price'/>:{card.priceEther}TOMO
+                  <FormattedMessage id='market.price'/>:{card.priceEther} TOMO
                   <br/>
                 </div>
                 {isBlockChainDataLoaded &&
@@ -104,8 +103,8 @@ class Market extends Component {
                     transaction {transactions[card.cardNo].status}
                   </div>
                   {transactions[card.cardNo].transactionHash && <p>confirm following transaction:
-                    <a href={'https://etherscan.io/tx/' + transactions[card.cardNo].transactionHash}>see
-                      in etherscan</a>
+                    <a href={'https://scan.tomochain.com/tx/' + transactions[card.cardNo].transactionHash}>see
+                      in TomoScan</a>
                   </p>}
                   {transactions[card.cardNo].error && <p>{transactions[card.cardNo].error}
                   </p>}
@@ -113,18 +112,16 @@ class Market extends Component {
               </div>
             })}
           </div>
-          <h3 className="ui white header"><FormattedMessage id='market.preSale2Header'/></h3>
-          <p className="gray"><FormattedMessage id='market.preSale2Text'/></p>
           <div
             className="ui center aligned stackable grid">
             {marketCards.map(card => {
               return <div className='ui five wide column center aligned' key={card.cardNo}>
-                <h3 className="ui white header">{card.cardNameJa}</h3>
-                <img src={card.imageURL}
-                     alt={card.cardNameJa}
+                <h3 className="ui white header">{intl.locale === "ja" ? card.cardNameJa : card.cardName}</h3>
+                <img src={getLocalizedURL(intl.locale, card.imageURL)}
+                     alt={intl.locale === "ja" ? card.cardNameJa : card.cardName}
                      className='ui fluid center aligned image'/>
                 <div className='ui gray text'>
-                  <FormattedMessage id='market.price'/>:{card.priceEther}ETH
+                  <FormattedMessage id='market.price'/>:{card.priceEther} TOMO
                   <br/>
                 </div>
                 {isBlockChainDataLoaded &&
@@ -164,8 +161,8 @@ class Market extends Component {
                     transaction {transactions[card.cardNo].status}
                   </div>
                   {transactions[card.cardNo].transactionHash && <p>confirm following transaction:
-                    <a href={'https://etherscan.io/tx/' + transactions[card.cardNo].transactionHash}>see
-                      in etherscan</a>
+                    <a href={'https://scan.tomochain.com/tx/' + transactions[card.cardNo].transactionHash}>see
+                      in TomoScan</a>
                   </p>}
                   {transactions[card.cardNo].error && <p>{transactions[card.cardNo].error}
                   </p>}
@@ -173,10 +170,6 @@ class Market extends Component {
               </div>
             })}
           </div>
-          <h3 className="ui white header"><FormattedMessage id='market.preSale3Header'/></h3>
-          <p className="gray"><FormattedMessage id='market.preSale3Text'/></p>
-          <h3 className="ui white header"><FormattedMessage id='market.preSale4Header'/></h3>
-          <p className="gray"><FormattedMessage id='market.preSale4Text'/></p>
           {/*{intl.locale === "ja" && <div>*/}
           {/*  <h2 className="ui white header">購入方法</h2>*/}
           {/*  <div className='ui stackable grid'>*/}
@@ -370,6 +363,15 @@ class Market extends Component {
     }
   }
 }
+
+const getLocalizedURL = (locale, url) => {
+  if (locale === "ja") {
+    return url;
+  }
+  if (locale === "en") {
+    return url.replace("images/", "images/english/");
+  }
+};
 
 async function asyncFilter(array, asyncCallback) {
   const bits = await Promise.all(array.map(asyncCallback));
