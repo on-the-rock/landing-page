@@ -17,7 +17,7 @@ class Header extends Component {
       <div className='col banner'>
         <div className="ui container">
           <img className='ui fluid image'
-               src='https://d1wwbe44qvngmh.cloudfront.net/images/banner-content.png'
+               src='images/logo-tomo.png'
                alt='banner'/>
           <a href='https://framecbattle.com'>
             <img className='start-button'
@@ -31,6 +31,7 @@ class Header extends Component {
                 <a className={activeIndex === 1 ? "active item" : "item"} href="market"><FormattedMessage
                   id="market.preSale"/></a>
                 {/*<a className={activeIndex === 2 ? "active item" : "item"}>Company</a>*/}
+                <a className={activeIndex === 2 ? "active item" : "item"} href="/about-game"><FormattedMessage id="aboutGame.aboutGame"/></a>
                 <a className={activeIndex === 3 ? "active item" : "item"} href="/qa">Q&A</a>
                 <Dropdown text='Language'>
                   <Dropdown.Menu>

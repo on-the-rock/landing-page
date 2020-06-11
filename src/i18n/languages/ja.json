@@ -1,6 +1,10 @@
 {
   "top": {
     "subTitle": "あなただけのカードをつくりだせ！",
+    "requireEnvironment": "このゲームをプレイするのに必要なもの",
+    "requireEnvironmentDescription": "このゲームはブラウザのみでプレイできますが、フレームを購入したり、勝利時に報酬をもらうなどのブロックチェーンの機能を使うためにPantographが必要です。",
+    "pantographDescription": "PantographはTomoChainと接続するために必要なChrome Extensionです。",
+    "pantographAppDescription": "Pantograph AppはTomoChainと接続するために必要なモバイルアプリです。",
     "howDoesItWork": "概要",
     "yourOnlyCardTitle": "自分だけのオリジナルカードをつくり対戦できる",
     "yourOnlyCardSentence": "あなたが所有するブロックチェーンゲームの画像をつかって世界に1枚だけのカードをつくりだし対戦ができます。",
@@ -39,6 +43,12 @@
     "price": "価格",
     "cancelPreSale": "メンテナンス中",
     "cancelPreSaleText" : "現在プレセールページはメンテナンス中・・・"
+  },
+  "aboutGame": {
+    "aboutGame": "ゲームについて",
+    "fightWith40Cards": "このゲームは40枚のカードで戦います。",
+    "getPanto": "アリーナでの戦いに勝利するとPanto Drawが0.05Ticketもらえます。",
+    "specialEffects": "特殊効果の一例です"
   },
   "register": {
     "preRegister": "事前登録",

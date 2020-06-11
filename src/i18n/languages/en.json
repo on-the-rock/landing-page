@@ -1,6 +1,10 @@
 {
   "top": {
     "subTitle": "Create your own card!!!",
+    "requireEnvironment": "Required Environment",
+    "requireEnvironmentDescription": "Pantograph is needed to play this game.",
+    "pantographDescription": "Pantograph is Chrome Extension which connect to TomoChain.",
+    "pantographAppDescription": "Pantograph App is Application which connect to TomoChain.",
     "howDoesItWork": "How does it work",
     "yourOnlyCardTitle": "Create your own card and battle",
     "yourOnlyCardSentence": "You can create cards using your own blockchain game's images.",
@@ -20,6 +24,12 @@
     "battleTitle": "Battle",
     "battleSentence": "Your favorite characters are all over the screen!!!",
     "companyName": "Copyright © 2019 on the rock Co., Ltd. All rights reserved."
+  },
+  "aboutGame": {
+    "aboutGame": "About Game",
+    "fightWith40Cards": "We'll be fighting with 40 cards.",
+    "getPanto": "When you fight in the arena, the winner gets a PantoDraw0.05Chiket every time!",
+    "specialEffects": "Followings are example of special effects"
   },
   "market": {
     "preSale": "Market",
