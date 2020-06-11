@@ -263,12 +263,12 @@ class Market extends Component {
     if (BlockChainApi.isBlockchainLoaded()) {
       const tokens = await BlockChainApi.listTokenIdsByCardNo(cardNo);
       let tokenPrice = 0;
-      console.log('tokens:', tokens)
+      console.log('tokens:', tokens);
       const remainingTokens = await asyncFilter(tokens, async token => {
-        console.log('token:', token)
+        console.log('token:', token);
         const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
-        console.log('price:', price)
-        console.log(price !== 0)
+        console.log('price:', price);
+        console.log(price !== 0);
         tokenPrice = tokenPrice !== 0 ? tokenPrice : price;
         return price !== 0
       })
@@ -310,19 +310,19 @@ class Market extends Component {
   }
 
   async onPurchaseByPantoLight(cardNo) {
-    const {transactions} = this.state
+    const {transactions} = this.state;
     if (!BlockChainApi.isBlockchainLoaded()) {
       await BlockChainApi.loadBlockChain();
     }
     if (BlockChainApi.isBlockchainLoaded()) {
       const tokens = await BlockChainApi.listTokenIdsByCardNo(cardNo);
       let tokenPrice = 0;
-      console.log('tokens:', tokens)
+      console.log('tokens:', tokens);
       const remainingTokens = await asyncFilter(tokens, async token => {
-        console.log('token:', token)
+        console.log('token:', token);
         const price = Number.parseInt(await BlockChainApi.getPriceByTokenId(token));
-        console.log('price:', price)
-        console.log(price !== 0)
+        console.log('price:', price);
+        console.log(price !== 0);
         tokenPrice = tokenPrice !== 0 ? tokenPrice : price;
         return price !== 0
       })

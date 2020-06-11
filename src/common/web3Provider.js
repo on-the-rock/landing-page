@@ -22,9 +22,12 @@ const blockchainSetUp = async function () {
     } else if (window.tomoWeb3) {
         console.log("detect web3 provider");
         web3js = new Web3(window.tomoWeb3.currentProvider);
-
-        customerAddress = web3js.eth.accounts[0];
-    } else {
+        customerAddress = (await web3js.eth.getAccounts())[0];
+    } else if (window.web3) {
+        console.log("detect web3 provider");
+        web3js = new Web3(window.web3.currentProvider);
+        customerAddress = (await web3js.eth.getAccounts())[0];}
+    else {
         //TODO: metamaskのインストールを促すようにしたいが、このタイミングじゃなくていいかも。Market行ったタイミング等でいい
         return;
     }

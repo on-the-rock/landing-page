@@ -39,7 +39,7 @@ export default class BlockChainApi {
         const pantoPointRateDevide = await sellContract.methods.pantoPointRateDevide().call();
         const pantoPointPrice = price * pantoPointRate / pantoPointRateDevide;
         console.log("price:", pantoPointPrice);
-        await pantoPointContract.methods.approve(settings.blockChain.sellContract.address, pantoPointPrice).send({from: customerAddress});
+        await pantoPointContract.methods.approve(settings.blockChain.sellContract.address, pantoPointPrice.toString()).send({from: customerAddress});
         await sellContract.methods.buyByPontoPoint(tokenId,pantoPointPrice).send({from: customerAddress}).on('transactionHash',onTransactionHash)
           .on('receipt',onReceipt)
           .on('error',onError)
@@ -49,7 +49,7 @@ export default class BlockChainApi {
         const pantoLightRateDevide = await sellContract.methods.pantoLightRateDevide().call();
         const pantoLightPrice = price * pantoLightRate / pantoLightRateDevide;
         console.log("price:", pantoLightPrice);
-        await pantoLightContract.methods.approve(settings.blockChain.sellContract.address, pantoLightPrice).send({from: customerAddress});
+        await pantoLightContract.methods.approve(settings.blockChain.sellContract.address, pantoLightPrice.toString()).send({from: customerAddress});
         await sellContract.methods.buyByPontoPoint(tokenId,pantoLightPrice).send({from: customerAddress}).on('transactionHash',onTransactionHash)
           .on('receipt',onReceipt)
           .on('error',onError)
