@@ -3,6 +3,7 @@ import {FormattedMessage} from "react-intl";
 import Header from "../component/header";
 import Footer from "../component/footer";
 import MediaQuery from "react-responsive/src/Component";
+import styled from "styled-components";
 
 class Home extends Component {
   render() {
@@ -17,14 +18,18 @@ class Home extends Component {
               <MediaQuery query='(min-width: 768px)'>
                 <h3 className="ui white header">
                   <a href="https://chrome.google.com/webstore/detail/pantograph/ocfgfhicacgipgpiapepehhpidbhijkl">
-                    Pantograph
+                    <WhiteImage src="/images/logo-vertical.svg" alt="pantograph" className="ui centered medium image"/>
                   </a>
                 </h3>
                 <p className="gray"><FormattedMessage id="top.pantographDescription"/></p>
               </MediaQuery>
               <MediaQuery query='(max-width: 768px)'>
-                <h3 className="ui white header"><a
-                  href="https://pantograph.io/">Pantograph App</a>
+                <h3 className="ui white header">
+                  <a
+                    href="https://pantograph.io/">
+                    <WhiteImage src="/images/logo-vertical.svg" alt="pantograph"
+                                className="ui centered medium image"/>
+                  </a>
                 </h3>
                 <p className="gray"><FormattedMessage id="top.pantographAppDescription"/></p>
               </MediaQuery>
@@ -134,5 +139,9 @@ class Home extends Component {
     );
   }
 }
+
+const WhiteImage = styled.img`
+  filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
+`;
 
 export default Home;

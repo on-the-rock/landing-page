@@ -138,14 +138,12 @@
 }
 
 .absolute-menu {
-    position: absolute;
     top: 0%;
-    left: 10%;
 }
 
 .start-button {
     position: absolute !important;
-    top: 50% !important;
+    top: 70% !important;
     left: 41% !important;
     width: 18%;
     cursor: pointer;

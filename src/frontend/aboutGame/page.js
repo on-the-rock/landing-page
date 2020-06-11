@@ -8,7 +8,7 @@ class Home extends Component {
   render() {
     return (
       <div className="pusher">
-        <Header activeIndex={0}/>
+        <Header activeIndex={2}/>
         <div className="ui middle aligned stackable grid container">
           <div className="row">
             <div className="sixteen wide center aligned column" style={{margin: "0 0 5vh 0"}}>

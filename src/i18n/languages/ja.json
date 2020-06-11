@@ -45,7 +45,7 @@
     "cancelPreSaleText" : "現在プレセールページはメンテナンス中・・・"
   },
   "aboutGame": {
-    "aboutGame": "ゲームについて",
+    "aboutGame": "ゲーム",
     "fightWith40Cards": "このゲームは40枚のカードで戦います。",
     "getPanto": "アリーナでの戦いに勝利するとPanto Drawが0.05Ticketもらえます。",
     "specialEffects": "特殊効果の一例です"
