@@ -141,13 +141,7 @@
     top: 0%;
 }
 
-.start-button {
-    position: absolute !important;
-    top: 70% !important;
-    left: 41% !important;
-    width: 18%;
-    cursor: pointer;
-}
+
 
 @media screen and (min-width: 1224px) {
     .pre-register-button {
@@ -155,6 +149,13 @@
         top: 45% !important;
         left: 38% !important;
         width: 25%;
+        cursor: pointer;
+    }
+    .start-button {
+        position: absolute !important;
+        top: 70% !important;
+        left: 41% !important;
+        width: 18%;
         cursor: pointer;
     }
 }
@@ -165,6 +166,13 @@
         top: 60% !important;
         left: 5% !important;
         width: 90%;
+        cursor: pointer;
+    }
+    .start-button {
+        position: absolute !important;
+        top: 70% !important;
+        left: 25% !important;
+        width: 50%;
         cursor: pointer;
     }
 }
