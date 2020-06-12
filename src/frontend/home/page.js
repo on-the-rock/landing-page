@@ -18,7 +18,10 @@ class Home extends Component {
               <MediaQuery query='(min-width: 768px)'>
                 <h3 className="ui white header">
                   <a href="https://chrome.google.com/webstore/detail/pantograph/ocfgfhicacgipgpiapepehhpidbhijkl">
-                    <WhiteImage src="/images/logo-vertical.svg" alt="pantograph" className="ui centered medium image"/>
+                    <WhiteImage src="/images/logo-vertical.svg" alt="pantograph" className="ui centered medium image"
+                                style={{marginBottom: "5vh"}}/>
+                    <img src="/images/Extension.png" alt="logo" className="ui centered medium image"
+                         style={{marginBottom: "5vh"}}/>
                   </a>
                 </h3>
                 <p className="gray"><FormattedMessage id="top.pantographDescription"/></p>
@@ -28,8 +31,19 @@ class Home extends Component {
                   <a
                     href="https://pantograph.io/">
                     <WhiteImage src="/images/logo-vertical.svg" alt="pantograph"
-                                className="ui centered medium image"/>
+                                className="ui centered medium image"
+                                style={{marginBottom: "5vh"}}/>
                   </a>
+                  <div className="ui center aligned images">
+                    <a href="https://apps.apple.com/us/app/pantograph-networking-app/id1504033778">
+                      <img src="/images/Pantograph-IOS.png" alt="logo" className="ui small image"
+                           style={{marginBottom: "5vh"}}/>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=pantograph.bacoor.crypto.co">
+                    <img src="/images/Pantograph-Android.png" alt="logo" className="ui small image"
+                         style={{marginBottom: "5vh"}}/>
+                    </a>
+                  </div>
                 </h3>
                 <p className="gray"><FormattedMessage id="top.pantographAppDescription"/></p>
               </MediaQuery>
