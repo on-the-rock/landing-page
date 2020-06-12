@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Dropdown} from "semantic-ui-react";
 import PreRegister from "../preRegister";
 import {FormattedMessage} from "react-intl";
+import {Link} from "react-router-dom";
 
 class Header extends Component {
   state = {};
@@ -18,12 +19,12 @@ class Header extends Component {
         <div className="ui container absolute-menu">
           <div className="ui small secondary inverted menu">
             <div className="right item">
-              <a className={activeIndex === 0 ? "active item" : "item"} href="/">Home</a>
-              <a className={activeIndex === 1 ? "active item" : "item"} href="market"><FormattedMessage
-                id="market.preSale"/></a>
+              <Link className={activeIndex === 0 ? "active item" : "item"} to="/">Home</Link>
+              <Link className={activeIndex === 1 ? "active item" : "item"} to="market"><FormattedMessage
+                id="market.preSale"/></Link>
               {/*<a className={activeIndex === 2 ? "active item" : "item"}>Company</a>*/}
-              <a className={activeIndex === 2 ? "active item" : "item"} href="/about-game"><FormattedMessage id="aboutGame.aboutGame"/></a>
-              <a className={activeIndex === 3 ? "active item" : "item"} href="/qa">Q&A</a>
+              <Link className={activeIndex === 2 ? "active item" : "item"} to="/about-game"><FormattedMessage id="aboutGame.aboutGame"/></Link>
+              <Link className={activeIndex === 3 ? "active item" : "item"} to="/qa">Q&A</Link>
               <Dropdown text='Language'>
                 <Dropdown.Menu>
                   <Dropdown.Item text='English' onClick={e => {
