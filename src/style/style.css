@@ -151,13 +151,6 @@
         width: 25%;
         cursor: pointer;
     }
-    .start-button {
-        position: absolute !important;
-        top: 70% !important;
-        left: 41% !important;
-        width: 18%;
-        cursor: pointer;
-    }
 }
 
 @media screen and (max-width: 1224px) {
@@ -168,6 +161,19 @@
         width: 90%;
         cursor: pointer;
     }
+}
+@media screen and (min-width: 768px){
+    .start-button {
+        position: absolute !important;
+        top: 70% !important;
+        left: 41% !important;
+        width: 18%;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 768px){
     .start-button {
         position: absolute !important;
         top: 70% !important;
@@ -176,6 +182,7 @@
         cursor: pointer;
     }
 }
+
 
 .banner-text {
     position: absolute !important;
