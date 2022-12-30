@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "aws-amplify": "^1.1.40",
-    "flat": "^4.1.0",
+    "flat": "^5.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^2.9.0",
